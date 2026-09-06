@@ -70,9 +70,10 @@ function buildApplicationModal() {
 
   const neighborhood = new TextInputBuilder()
     .setCustomId("neighborhood")
-    .setLabel("Current/Previous Neighborhood + Tag")
-    .setStyle(TextInputStyle.Short)
-    .setPlaceholder("Current: #ABC123DEF / Previous: #QVW789XYZ")
+    .setLabel("Current/Previous Neighborhood, Name + Tag")
+    .setStyle(TextInputStyle.Paragraph)
+    .setPlaceholder("Current: Bunny Burrow / #ABC123DEF\nPrevious: Golden Meadow / #QVW789XYZ")
+    .setMaxLength(300)
     .setRequired(true);
 
   return new ModalBuilder()
