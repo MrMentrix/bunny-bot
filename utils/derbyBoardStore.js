@@ -31,6 +31,16 @@ export function setBoard(guildId, neighborhoodId, images) {
   writeAll(all);
 }
 
+export function addBoardImage(guildId, neighborhoodId, image) {
+  const all = readAll();
+  const guildData = all[guildId] ?? {};
+  const images = guildData[neighborhoodId] ?? [];
+  images.push(image);
+  guildData[neighborhoodId] = images;
+  all[guildId] = guildData;
+  writeAll(all);
+}
+
 export function deleteBoard(guildId, neighborhoodId) {
   const all = readAll();
   const guildData = all[guildId] ?? {};

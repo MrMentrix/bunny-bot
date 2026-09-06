@@ -2,7 +2,7 @@ import { AttachmentBuilder } from "discord.js";
 import { loadDerbyChunks } from "./derbyItems.js";
 import { renderDerbyChunk } from "./derbyRender.js";
 import { getEmojiForItem, getItemForEmojiId } from "./derbyEmojis.js";
-import { getBoard, setBoard, deleteBoard, findByMessageId } from "./derbyBoardStore.js";
+import { getBoard, setBoard, addBoardImage, deleteBoard, findByMessageId } from "./derbyBoardStore.js";
 
 function countReservations(message, chunk) {
   const counts = new Array(chunk.length).fill(0);
@@ -32,6 +32,8 @@ export async function postDerbyBoard(channel, guildId, neighborhoodId) {
     }
   }
 
+  setBoard(guildId, neighborhoodId, []); // reset before reposting so partial progress starts clean
+
   const chunks = loadDerbyChunks();
   const images = [];
 
@@ -48,10 +50,11 @@ export async function postDerbyBoard(channel, guildId, neighborhoodId) {
       await message.react(`${emoji.emojiName}:${emoji.emojiId}`);
     }
 
-    images.push({ chunkIndex, messageId: message.id });
+    const image = { chunkIndex, messageId: message.id };
+    images.push(image);
+    addBoardImage(guildId, neighborhoodId, image); // persisted immediately — survives a mid-loop crash
   }
 
-  setBoard(guildId, neighborhoodId, images);
   return images;
 }
 
