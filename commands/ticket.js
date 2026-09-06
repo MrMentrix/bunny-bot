@@ -259,9 +259,10 @@ async function handleClose(interaction) {
   await interaction.reply({ content: "Closing ticket and saving transcript..." });
 
   const guildConfig = getGuildConfig(interaction.guildId);
-  const logChannel = guildConfig["ticket-log"] ? interaction.guild.channels.cache.get(guildConfig["ticket-log"]) : null;
-  const transcript = await buildTranscript(interaction.channel);
   const ticketType = TICKET_TYPES[ticket.type];
+  const logChannelId = guildConfig[ticketType.logSetting];
+  const logChannel = logChannelId ? interaction.guild.channels.cache.get(logChannelId) : null;
+  const transcript = await buildTranscript(interaction.channel);
 
   if (logChannel) {
     const creator = await interaction.client.users.fetch(ticket.creatorId).catch(() => null);

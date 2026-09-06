@@ -29,4 +29,10 @@ export const CONFIG_TARGETS = {
     channelTypes: [ChannelType.GuildText, ChannelType.GuildAnnouncement],
     actions: ["bind", "unbind"],
   },
+  "application-ticket-log": {
+    label: "Application Ticket Log",
+    valueType: "channel",
+    channelTypes: [ChannelType.GuildText, ChannelType.GuildAnnouncement],
+    actions: ["bind", "unbind"],
+  },
 };
