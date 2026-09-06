@@ -3,6 +3,7 @@ import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { startTicketReminderScheduler } from "./utils/ticketReminder.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -19,6 +20,7 @@ for (const file of commandFiles) {
 
 client.once(Events.ClientReady, (readyClient) => {
   console.log(`Logged in as ${readyClient.user.tag}`);
+  startTicketReminderScheduler(readyClient);
 });
 
 async function replyWithError(interaction, content) {

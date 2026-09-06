@@ -6,6 +6,9 @@ import {
   ButtonStyle,
   ActionRowBuilder,
   EmbedBuilder,
+  ModalBuilder,
+  TextInputBuilder,
+  TextInputStyle,
   ChannelType,
   AttachmentBuilder,
   MessageFlags,
@@ -13,7 +16,7 @@ import {
 import { TICKET_TYPES } from "../config/ticketTypes.js";
 import { BRAND_COLOR } from "../config/theme.js";
 import { getGuildConfig } from "../utils/configStore.js";
-import { createTicket, getTicket, deleteTicket } from "../utils/ticketStore.js";
+import { createTicket, getTicket, deleteTicket, nextTicketNumber } from "../utils/ticketStore.js";
 
 export const data = new SlashCommandBuilder()
   .setName("ticket")
@@ -34,6 +37,70 @@ function buildPanel() {
   );
 
   return { embeds: [embed], components: [row] };
+}
+
+function buildApplicationModal() {
+  const intro = new TextInputBuilder()
+    .setCustomId("intro")
+    .setLabel("Introduce yourself, age, where you're from")
+    .setStyle(TextInputStyle.Paragraph)
+    .setMaxLength(1000)
+    .setRequired(true);
+
+  const farmName = new TextInputBuilder()
+    .setCustomId("farm_name")
+    .setLabel("Farm Name")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("e.g. Greg's Farm")
+    .setRequired(true);
+
+  const farmLevel = new TextInputBuilder()
+    .setCustomId("farm_level")
+    .setLabel("Farm Level")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("e.g. 69")
+    .setRequired(true);
+
+  const farmTag = new TextInputBuilder()
+    .setCustomId("farm_tag")
+    .setLabel("Farm Tag")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("e.g. #ABC123XYZ")
+    .setRequired(true);
+
+  const neighborhood = new TextInputBuilder()
+    .setCustomId("neighborhood")
+    .setLabel("Current/Previous Neighborhood + Tag")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("Current: #ABC123DEF / Previous: #QVW789XYZ")
+    .setRequired(true);
+
+  return new ModalBuilder()
+    .setCustomId("ticket:application-modal")
+    .setTitle("🐰 Hay Day Application")
+    .addComponents(
+      new ActionRowBuilder().addComponents(intro),
+      new ActionRowBuilder().addComponents(farmName),
+      new ActionRowBuilder().addComponents(farmLevel),
+      new ActionRowBuilder().addComponents(farmTag),
+      new ActionRowBuilder().addComponents(neighborhood)
+    );
+}
+
+function buildApplicationEmbed(applicant, answers) {
+  return new EmbedBuilder()
+    .setTitle("🐰 New Farm Application! 🥕")
+    .setColor(BRAND_COLOR)
+    .setThumbnail(applicant.displayAvatarURL())
+    .addFields(
+      { name: "🌸 About", value: answers.intro },
+      { name: "🚜 Farm Name", value: answers.farmName, inline: true },
+      { name: "⭐ Farm Level", value: answers.farmLevel, inline: true },
+      { name: "🏷️ Farm Tag", value: answers.farmTag, inline: true },
+      { name: "🏘️ Neighborhood", value: answers.neighborhood }
+    )
+    .setFooter({ text: "Hop to it — a moderator will be with you soon! 🐾" })
+    .setTimestamp();
 }
 
 function roleIdsFor(guildConfig, settingKeys) {
@@ -62,7 +129,7 @@ export async function execute(interaction) {
   }
 }
 
-async function handleCreate(interaction, typeKey) {
+async function handleCreate(interaction, typeKey, answers) {
   const ticketType = TICKET_TYPES[typeKey];
   const guildConfig = getGuildConfig(interaction.guildId);
   const category = guildConfig["tickets-category"]
@@ -111,10 +178,8 @@ async function handleCreate(interaction, typeKey) {
     })),
   ];
 
-  const channelName = `${typeKey}-${interaction.user.username}`
-    .toLowerCase()
-    .replace(/[^a-z0-9-]/g, "-")
-    .slice(0, 90);
+  const number = nextTicketNumber(interaction.guildId, ticketType.channelPrefix);
+  const channelName = `${ticketType.channelPrefix}-${String(number).padStart(6, "0")}`;
 
   const ticketChannel = await interaction.guild.channels.create({
     name: channelName,
@@ -135,9 +200,11 @@ async function handleCreate(interaction, typeKey) {
   );
 
   const pingContent = pingRoleIds.map((id) => `<@&${id}>`).join(" ");
+  const intro = `${pingContent} — new **${ticketType.label}** ${answers ? "" : "ticket "}from ${interaction.user}.`;
 
   await ticketChannel.send({
-    content: `${pingContent} — new **${ticketType.label}** ticket from ${interaction.user}.`,
+    content: intro,
+    embeds: answers ? [buildApplicationEmbed(interaction.user, answers)] : [],
     allowedMentions: { roles: pingRoleIds },
     components: [closeRow],
   });
@@ -223,11 +290,32 @@ export async function handleButton(interaction) {
   const [, action, typeKey] = interaction.customId.split(":");
 
   if (action === "create") {
+    const ticketType = TICKET_TYPES[typeKey];
+
+    if (ticketType.usesModal) {
+      await interaction.showModal(buildApplicationModal());
+      return;
+    }
+
     await handleCreate(interaction, typeKey);
     return;
   }
 
   if (action === "close") {
     await handleClose(interaction);
+  }
+}
+
+export async function handleModalSubmit(interaction) {
+  if (interaction.customId === "ticket:application-modal") {
+    const answers = {
+      intro: interaction.fields.getTextInputValue("intro"),
+      farmName: interaction.fields.getTextInputValue("farm_name"),
+      farmLevel: interaction.fields.getTextInputValue("farm_level"),
+      farmTag: interaction.fields.getTextInputValue("farm_tag"),
+      neighborhood: interaction.fields.getTextInputValue("neighborhood"),
+    };
+
+    await handleCreate(interaction, "application", answers);
   }
 }

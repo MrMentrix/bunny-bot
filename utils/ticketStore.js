@@ -5,32 +5,46 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.join(__dirname, "..", "data");
 const filePath = path.join(dataDir, "tickets.json");
+const countersPath = path.join(dataDir, "ticketCounters.json");
 
-function readAll() {
+function readJson(file) {
   try {
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+    return JSON.parse(fs.readFileSync(file, "utf8"));
   } catch {
     return {};
   }
 }
 
-function writeAll(data) {
+function writeJson(file, data) {
   fs.mkdirSync(dataDir, { recursive: true });
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
 }
 
 export function createTicket(channelId, ticket) {
-  const all = readAll();
+  const all = readJson(filePath);
   all[channelId] = ticket;
-  writeAll(all);
+  writeJson(filePath, all);
 }
 
 export function getTicket(channelId) {
-  return readAll()[channelId] ?? null;
+  return readJson(filePath)[channelId] ?? null;
+}
+
+export function getAllTickets() {
+  return readJson(filePath);
 }
 
 export function deleteTicket(channelId) {
-  const all = readAll();
+  const all = readJson(filePath);
   delete all[channelId];
-  writeAll(all);
+  writeJson(filePath, all);
+}
+
+export function nextTicketNumber(guildId, prefix) {
+  const counters = readJson(countersPath);
+  const key = `${guildId}:${prefix}`;
+  const next = (counters[key] ?? 0) + 1;
+  counters[key] = next;
+  writeJson(countersPath, counters);
+  return next;
 }
