@@ -1,0 +1,14 @@
+{
+  "name": "bunny-bot",
+  "version": "0.1.0",
+  "description": "A Discord bot",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  }
+}
