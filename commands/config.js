@@ -2,10 +2,9 @@ import { SlashCommandBuilder, PermissionFlagsBits, ChannelType, MessageFlags } f
 import { CONFIG_TARGETS } from "../config/configTargets.js";
 import { getGuildConfig, setGuildValue, unsetGuildValue } from "../utils/configStore.js";
 
-const settingChoices = Object.entries(CONFIG_TARGETS).map(([value, target]) => ({
-  name: target.label,
-  value,
-}));
+const settingChoices = Object.entries(CONFIG_TARGETS)
+  .map(([value, target]) => ({ name: target.label, value }))
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 const actionChoices = [
   { name: "bind", value: "bind" },
@@ -39,7 +38,9 @@ function formatValue(interaction, target, id) {
 
 async function showSettings(interaction, onlyKey) {
   const config = getGuildConfig(interaction.guildId);
-  const keys = onlyKey ? [onlyKey] : Object.keys(CONFIG_TARGETS);
+  const keys = onlyKey
+    ? [onlyKey]
+    : Object.keys(CONFIG_TARGETS).sort((a, b) => CONFIG_TARGETS[a].label.localeCompare(CONFIG_TARGETS[b].label));
 
   const lines = keys.map(
     (key) => `**${CONFIG_TARGETS[key].label}**: ${formatValue(interaction, CONFIG_TARGETS[key], config[key])}`
