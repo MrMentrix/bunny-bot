@@ -18,4 +18,9 @@ export const CONFIG_TARGETS = {
     valueType: "role",
     actions: ["bind", "unbind"],
   },
+  "moderator-role": {
+    label: "Moderator Role",
+    valueType: "role",
+    actions: ["bind", "unbind"],
+  },
 };
