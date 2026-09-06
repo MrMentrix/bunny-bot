@@ -44,18 +44,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
     return;
   }
 
-  if (interaction.isAutocomplete()) {
-    const command = client.commands.get(interaction.commandName);
-    if (!command?.autocomplete) return;
-
-    try {
-      await command.autocomplete(interaction);
-    } catch (error) {
-      console.error(error);
-    }
-    return;
-  }
-
   if (interaction.isModalSubmit()) {
     const [commandName] = interaction.customId.split(":");
     const command = client.commands.get(commandName);
