@@ -77,7 +77,6 @@ function buildApplicationModal() {
     .setRequired(true);
 
   return new ModalBuilder()
-    .setCustomId("ticket:application-modal")
     .setTitle("🐰 Hay Day Application")
     .addComponents(
       new ActionRowBuilder().addComponents(intro),
@@ -86,6 +85,16 @@ function buildApplicationModal() {
       new ActionRowBuilder().addComponents(farmTag),
       new ActionRowBuilder().addComponents(neighborhood)
     );
+}
+
+function extractApplicationAnswers(fields) {
+  return {
+    intro: fields.getTextInputValue("intro"),
+    farmName: fields.getTextInputValue("farm_name"),
+    farmLevel: fields.getTextInputValue("farm_level"),
+    farmTag: fields.getTextInputValue("farm_tag"),
+    neighborhood: fields.getTextInputValue("neighborhood"),
+  };
 }
 
 function buildApplicationEmbed(applicant, answers) {
@@ -103,6 +112,84 @@ function buildApplicationEmbed(applicant, answers) {
     .setFooter({ text: "Hop to it — a moderator will be with you soon! 🐾" })
     .setTimestamp();
 }
+
+function buildGiveawayModal() {
+  const description = new TextInputBuilder()
+    .setCustomId("description")
+    .setLabel("What do you want to give away?")
+    .setStyle(TextInputStyle.Paragraph)
+    .setMaxLength(1000)
+    .setRequired(true);
+
+  const targetGroup = new TextInputBuilder()
+    .setCustomId("target_group")
+    .setLabel("Target Group")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("Own Neighborhood or All Neighborhoods")
+    .setRequired(true);
+
+  const duration = new TextInputBuilder()
+    .setCustomId("duration")
+    .setLabel("Duration")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("e.g. 3 days")
+    .setRequired(true);
+
+  const winners = new TextInputBuilder()
+    .setCustomId("winners")
+    .setLabel("Number of Winners")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("e.g. 1")
+    .setRequired(true);
+
+  return new ModalBuilder()
+    .setTitle("🐰 Giveaway Request")
+    .addComponents(
+      new ActionRowBuilder().addComponents(description),
+      new ActionRowBuilder().addComponents(targetGroup),
+      new ActionRowBuilder().addComponents(duration),
+      new ActionRowBuilder().addComponents(winners)
+    );
+}
+
+function extractGiveawayAnswers(fields) {
+  return {
+    description: fields.getTextInputValue("description"),
+    targetGroup: fields.getTextInputValue("target_group"),
+    duration: fields.getTextInputValue("duration"),
+    winners: fields.getTextInputValue("winners"),
+  };
+}
+
+function buildGiveawayEmbed(host, answers) {
+  return new EmbedBuilder()
+    .setTitle("🎁 New Giveaway Request! 🐰")
+    .setColor(BRAND_COLOR)
+    .setThumbnail(host.displayAvatarURL())
+    .addFields(
+      { name: "🎀 Description", value: answers.description },
+      { name: "🌍 Target Group", value: answers.targetGroup, inline: true },
+      { name: "⏳ Duration", value: answers.duration, inline: true },
+      { name: "🏆 Winners", value: answers.winners, inline: true }
+    )
+    .setFooter({ text: "A moderator will review this shortly! 🐾" })
+    .setTimestamp();
+}
+
+const MODAL_BUILDERS = {
+  application: buildApplicationModal,
+  giveaway: buildGiveawayModal,
+};
+
+const ANSWER_EXTRACTORS = {
+  application: extractApplicationAnswers,
+  giveaway: extractGiveawayAnswers,
+};
+
+const EMBED_BUILDERS = {
+  application: buildApplicationEmbed,
+  giveaway: buildGiveawayEmbed,
+};
 
 function roleIdsFor(guildConfig, settingKeys) {
   return settingKeys.map((key) => guildConfig[key]).filter(Boolean);
@@ -205,7 +292,7 @@ async function handleCreate(interaction, typeKey, answers) {
 
   await ticketChannel.send({
     content: intro,
-    embeds: answers ? [buildApplicationEmbed(interaction.user, answers)] : [],
+    embeds: answers ? [EMBED_BUILDERS[typeKey](interaction.user, answers)] : [],
     allowedMentions: { roles: pingRoleIds },
     components: [closeRow],
   });
@@ -295,7 +382,8 @@ export async function handleButton(interaction) {
     const ticketType = TICKET_TYPES[typeKey];
 
     if (ticketType.usesModal) {
-      await interaction.showModal(buildApplicationModal());
+      const modal = MODAL_BUILDERS[typeKey]().setCustomId(`ticket:modal:${typeKey}`);
+      await interaction.showModal(modal);
       return;
     }
 
@@ -309,15 +397,9 @@ export async function handleButton(interaction) {
 }
 
 export async function handleModalSubmit(interaction) {
-  if (interaction.customId === "ticket:application-modal") {
-    const answers = {
-      intro: interaction.fields.getTextInputValue("intro"),
-      farmName: interaction.fields.getTextInputValue("farm_name"),
-      farmLevel: interaction.fields.getTextInputValue("farm_level"),
-      farmTag: interaction.fields.getTextInputValue("farm_tag"),
-      neighborhood: interaction.fields.getTextInputValue("neighborhood"),
-    };
+  const [, action, typeKey] = interaction.customId.split(":");
+  if (action !== "modal") return;
 
-    await handleCreate(interaction, "application", answers);
-  }
+  const answers = ANSWER_EXTRACTORS[typeKey](interaction.fields);
+  await handleCreate(interaction, typeKey, answers);
 }

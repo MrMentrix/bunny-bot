@@ -21,4 +21,12 @@ export const TICKET_TYPES = {
     usesModal: true,
     logSetting: "application-ticket-log",
   },
+  giveaway: {
+    label: "Giveaway",
+    channelPrefix: "giveaway",
+    staffRoleSettings: ["moderator-role"],
+    pingRoleSettings: ["moderator-role"],
+    usesModal: true,
+    logSetting: "ticket-log",
+  },
 };
