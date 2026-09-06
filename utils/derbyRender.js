@@ -41,7 +41,6 @@ const OPEN_BG = "#463e4a";
 const BORDER = "#463c48";
 
 const ROW_H = 56;
-const COL_LETTER = 50;
 const COL_ICON = 60;
 const COL_ITEM = 260;
 const COL_QTY = 80;
@@ -52,7 +51,7 @@ const PAD = 20;
 const HEADER_H = 34;
 const GAP = 40;
 
-const COL_W = COL_LETTER + COL_ICON + COL_ITEM + COL_QTY + COL_TIME + COL_POINTS + COL_STATUS;
+const COL_W = COL_ICON + COL_ITEM + COL_QTY + COL_TIME + COL_POINTS + COL_STATUS;
 
 function roundRectPath(ctx, x, y, w, h, r) {
   ctx.beginPath();
@@ -64,8 +63,8 @@ function roundRectPath(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-async function drawColumn(ctx, originX, items, reservedCounts, letterOffset) {
-  let hx = originX + COL_LETTER + COL_ICON;
+async function drawColumn(ctx, originX, items, reservedCounts, indexOffset) {
+  let hx = originX + COL_ICON;
   ctx.fillStyle = HEADER_BG;
   ctx.fillRect(originX, PAD, COL_W, HEADER_H);
   ctx.fillStyle = SUBTEXT;
@@ -83,29 +82,11 @@ async function drawColumn(ctx, originX, items, reservedCounts, letterOffset) {
   let y = PAD + HEADER_H;
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
-    const globalIndex = letterOffset + i;
-    const letter = String.fromCharCode(65 + globalIndex);
+    const globalIndex = indexOffset + i;
     ctx.fillStyle = i % 2 === 0 ? ROW_A : ROW_B;
     ctx.fillRect(originX, y, COL_W, ROW_H);
 
     let x = originX;
-    const cx = x + COL_LETTER / 2;
-    const cy = y + ROW_H / 2;
-    ctx.beginPath();
-    ctx.arc(cx, cy, 16, 0, Math.PI * 2);
-    ctx.fillStyle = "#3c3440";
-    ctx.fill();
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = BRAND;
-    ctx.stroke();
-    ctx.fillStyle = TEXT;
-    ctx.font = '18px "DejaVu Sans Bold"';
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(letter, cx, cy + 1);
-    ctx.textAlign = "left";
-    ctx.textBaseline = "alphabetic";
-    x += COL_LETTER;
 
     const icon = await getIcon(item.item);
     if (icon) {
