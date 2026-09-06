@@ -6,6 +6,8 @@ import {
   updateNeighborhood,
   deleteNeighborhood,
 } from "../utils/neighborhoodStore.js";
+import { postDerbyBoard } from "../utils/derbyBoard.js";
+import { getBoard, deleteBoard } from "../utils/derbyBoardStore.js";
 
 export const data = new SlashCommandBuilder()
   .setName("neighborhood")
@@ -116,6 +118,9 @@ export async function execute(interaction) {
       }
     }
 
+    // posting the derby board (6 images, up to 20 reactions each) is slow — defer before doing it
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
     const record = createNeighborhood(interaction.guildId, {
       name,
       tag,
@@ -123,7 +128,13 @@ export async function execute(interaction) {
       derbyChannelId: derbyChannel?.id,
     });
 
-    await interaction.reply({ content: `Neighborhood **${record.name}** created.`, flags: MessageFlags.Ephemeral });
+    if (derbyChannel) {
+      await postDerbyBoard(derbyChannel, interaction.guildId, record.id);
+    }
+
+    await interaction.editReply({
+      content: `Neighborhood **${record.name}** created.${derbyChannel ? ` Derby board posted in ${derbyChannel}.` : ""}`,
+    });
     return;
   }
 
@@ -162,6 +173,8 @@ export async function execute(interaction) {
       }
     }
 
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
     const patch = {};
     if (name) patch.name = name;
     if (tag) patch.tag = tag;
@@ -169,7 +182,14 @@ export async function execute(interaction) {
     if (derbyChannel) patch.derbyChannelId = derbyChannel.id;
 
     const updated = updateNeighborhood(interaction.guildId, id, patch);
-    await interaction.reply({ content: `Neighborhood **${updated.name}** updated.`, flags: MessageFlags.Ephemeral });
+
+    if (derbyChannel) {
+      await postDerbyBoard(derbyChannel, interaction.guildId, id);
+    }
+
+    await interaction.editReply({
+      content: `Neighborhood **${updated.name}** updated.${derbyChannel ? ` Derby board posted in ${derbyChannel}.` : ""}`,
+    });
     return;
   }
 
@@ -182,7 +202,21 @@ export async function execute(interaction) {
       return;
     }
 
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+    const board = getBoard(interaction.guildId, id);
+    if (board && existing.derbyChannelId) {
+      const channel = await interaction.guild.channels.fetch(existing.derbyChannelId).catch(() => null);
+      if (channel) {
+        for (const img of board) {
+          const msg = await channel.messages.fetch(img.messageId).catch(() => null);
+          if (msg) await msg.delete().catch(() => null);
+        }
+      }
+      deleteBoard(interaction.guildId, id);
+    }
+
     deleteNeighborhood(interaction.guildId, id);
-    await interaction.reply({ content: `Neighborhood **${existing.name}** deleted.`, flags: MessageFlags.Ephemeral });
+    await interaction.editReply({ content: `Neighborhood **${existing.name}** deleted.` });
   }
 }
