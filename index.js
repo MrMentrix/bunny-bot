@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent] });
 client.commands = new Collection();
 
 const commandsPath = path.join(__dirname, "commands");
@@ -40,6 +40,20 @@ client.on(Events.InteractionCreate, async (interaction) => {
     } catch (error) {
       console.error(error);
       await replyWithError(interaction, "Something went wrong while running this command.");
+    }
+    return;
+  }
+
+  if (interaction.isButton()) {
+    const [commandName] = interaction.customId.split(":");
+    const command = client.commands.get(commandName);
+    if (!command?.handleButton) return;
+
+    try {
+      await command.handleButton(interaction);
+    } catch (error) {
+      console.error(error);
+      await replyWithError(interaction, "Something went wrong.");
     }
     return;
   }
