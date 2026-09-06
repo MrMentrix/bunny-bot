@@ -56,7 +56,7 @@ function buildApplicationModal() {
 
   const farmLevel = new TextInputBuilder()
     .setCustomId("farm_level")
-    .setLabel("Farm Level")
+    .setLabel("Farm Level (numbers only)")
     .setStyle(TextInputStyle.Short)
     .setPlaceholder("e.g. 69")
     .setRequired(true);
