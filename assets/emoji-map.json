@@ -1,0 +1,527 @@
+[
+  {
+    "item": "Apple juice",
+    "emojiId": "1546202590692245574",
+    "emojiName": "applejuice"
+  },
+  {
+    "item": "Bacon",
+    "emojiId": "1546202589421502564",
+    "emojiName": "bacon"
+  },
+  {
+    "item": "Bacon and eggs",
+    "emojiId": "1546202587685195847",
+    "emojiName": "baconandeggs"
+  },
+  {
+    "item": "Baked potato",
+    "emojiId": "1546202586510528653",
+    "emojiName": "bakedpotato"
+  },
+  {
+    "item": "Banana bread",
+    "emojiId": "1546202585092857977",
+    "emojiName": "bananabread"
+  },
+  {
+    "item": "Banana pancakes",
+    "emojiId": "1546202583377514588",
+    "emojiName": "bananapancakes"
+  },
+  {
+    "item": "Bell pepper",
+    "emojiId": "1546202581259259985",
+    "emojiName": "bellpepper"
+  },
+  {
+    "item": "Bell pepper soup",
+    "emojiId": "1546202578398879895",
+    "emojiName": "bellpeppersoup"
+  },
+  {
+    "item": "Black sesame smoothie",
+    "emojiId": "1546202574489915533",
+    "emojiName": "blacksesamesmoothie"
+  },
+  {
+    "item": "Blackberry muffin",
+    "emojiId": "1546202576490340434",
+    "emojiName": "blackberrymuffin"
+  },
+  {
+    "item": "Blue woolly hat",
+    "emojiId": "1546202573089022083",
+    "emojiName": "bluewoollyhat"
+  },
+  {
+    "item": "Bright bouquet",
+    "emojiId": "1546202571180347532",
+    "emojiName": "brightbouquet"
+  },
+  {
+    "item": "Broccoli",
+    "emojiId": "1546202569595166720",
+    "emojiName": "broccoli"
+  },
+  {
+    "item": "Broccoli pasta",
+    "emojiId": "1546202567795544084",
+    "emojiName": "broccolipasta"
+  },
+  {
+    "item": "Broccoli soup",
+    "emojiId": "1546202566730321971",
+    "emojiName": "broccolisoup"
+  },
+  {
+    "item": "Buttered popcorn",
+    "emojiId": "1546202564863721524",
+    "emojiName": "butteredpopcorn"
+  },
+  {
+    "item": "Carrot",
+    "emojiId": "1546202563400040488",
+    "emojiName": "carrot"
+  },
+  {
+    "item": "Carrot cake",
+    "emojiId": "1546202561869119732",
+    "emojiName": "carrotcake"
+  },
+  {
+    "item": "Carrot pie",
+    "emojiId": "1546202560866816010",
+    "emojiName": "carrotpie"
+  },
+  {
+    "item": "Chili pepper",
+    "emojiId": "1546202559004414042",
+    "emojiName": "chilipepper"
+  },
+  {
+    "item": "Chili popcorn",
+    "emojiId": "1546202557402320906",
+    "emojiName": "chilipopcorn"
+  },
+  {
+    "item": "Cookie",
+    "emojiId": "1546202556030652488",
+    "emojiName": "cookie"
+  },
+  {
+    "item": "Corn",
+    "emojiId": "1546202554344407110",
+    "emojiName": "corn"
+  },
+  {
+    "item": "Cotton",
+    "emojiId": "1546202552864088306",
+    "emojiName": "cotton"
+  },
+  {
+    "item": "Cotton shirt",
+    "emojiId": "1546202551538548896",
+    "emojiName": "cottonshirt"
+  },
+  {
+    "item": "Cucumber",
+    "emojiId": "1546202549323833345",
+    "emojiName": "cucumber"
+  },
+  {
+    "item": "Cucumber sandwich",
+    "emojiId": "1546202548116001009",
+    "emojiName": "cucumbersandwich"
+  },
+  {
+    "item": "Cucumber smoothie",
+    "emojiId": "1546202546341679125",
+    "emojiName": "cucumbersmoothie"
+  },
+  {
+    "item": "Egg",
+    "emojiId": "1546202544236404829",
+    "emojiName": "egg"
+  },
+  {
+    "item": "Eggplant",
+    "emojiId": "1546202542432723054",
+    "emojiName": "eggplant"
+  },
+  {
+    "item": "Eggplant parmesan",
+    "emojiId": "1546202541099057182",
+    "emojiName": "eggplantparmesan"
+  },
+  {
+    "item": "Feta pie",
+    "emojiId": "1546202539647565985",
+    "emojiName": "fetapie"
+  },
+  {
+    "item": "Fish and chips",
+    "emojiId": "1546202538007863306",
+    "emojiName": "fishandchips"
+  },
+  {
+    "item": "Frutti di Mare pizza",
+    "emojiId": "1546202536740921365",
+    "emojiName": "fruttidimarepizza"
+  },
+  {
+    "item": "Ginger",
+    "emojiId": "1546202535252197437",
+    "emojiName": "ginger"
+  },
+  {
+    "item": "Goat cheese",
+    "emojiId": "1546202533746319512",
+    "emojiName": "goatcheese"
+  },
+  {
+    "item": "Goat cheese toast",
+    "emojiId": "1546202529648345209",
+    "emojiName": "goatcheesetoast"
+  },
+  {
+    "item": "Goat milk",
+    "emojiId": "1546202528188866773",
+    "emojiName": "goatmilk"
+  },
+  {
+    "item": "Grapes",
+    "emojiId": "1546202527098347570",
+    "emojiName": "grapes"
+  },
+  {
+    "item": "Green smoothie",
+    "emojiId": "1546202525596913724",
+    "emojiName": "greensmoothie"
+  },
+  {
+    "item": "Grilled eggplant",
+    "emojiId": "1546202524166656100",
+    "emojiName": "grilledeggplant"
+  },
+  {
+    "item": "Grilled onion",
+    "emojiId": "1546202522165710859",
+    "emojiName": "grilledonion"
+  },
+  {
+    "item": "Hamburger",
+    "emojiId": "1546202520039202826",
+    "emojiName": "hamburger"
+  },
+  {
+    "item": "Honey popcorn",
+    "emojiId": "1546202518030393404",
+    "emojiName": "honeypopcorn"
+  },
+  {
+    "item": "Honey tea",
+    "emojiId": "1546202516893474887",
+    "emojiName": "honeytea"
+  },
+  {
+    "item": "Honey toast",
+    "emojiId": "1546202515752620052",
+    "emojiName": "honeytoast"
+  },
+  {
+    "item": "Hot chocolate",
+    "emojiId": "1546202514645581854",
+    "emojiName": "hotchocolate"
+  },
+  {
+    "item": "Hot dog",
+    "emojiId": "1546202513437491353",
+    "emojiName": "hotdog"
+  },
+  {
+    "item": "Indigo",
+    "emojiId": "1546202511730417684",
+    "emojiName": "indigo"
+  },
+  {
+    "item": "Lemon curd",
+    "emojiId": "1546202510094639236",
+    "emojiName": "lemoncurd"
+  },
+  {
+    "item": "Lettuce",
+    "emojiId": "1546202508232237148",
+    "emojiName": "lettuce"
+  },
+  {
+    "item": "Lobster skewer",
+    "emojiId": "1546202506353442846",
+    "emojiName": "lobsterskewer"
+  },
+  {
+    "item": "Milk",
+    "emojiId": "1546202504730116156",
+    "emojiName": "milk"
+  },
+  {
+    "item": "Milk tea",
+    "emojiId": "1546202502993678366",
+    "emojiName": "milktea"
+  },
+  {
+    "item": "Mint",
+    "emojiId": "1546202499923316798",
+    "emojiName": "mint"
+  },
+  {
+    "item": "Mint tea",
+    "emojiId": "1546202498090672129",
+    "emojiName": "minttea"
+  },
+  {
+    "item": "Mixed smoothie",
+    "emojiId": "1546202495091474473",
+    "emojiName": "mixedsmoothie"
+  },
+  {
+    "item": "Mushroom",
+    "emojiId": "1546202493032202300",
+    "emojiName": "mushroom"
+  },
+  {
+    "item": "Mushroom pasta",
+    "emojiId": "1546202491555946616",
+    "emojiName": "mushroompasta"
+  },
+  {
+    "item": "Mushroom salad",
+    "emojiId": "1546202489781620819",
+    "emojiName": "mushroomsalad"
+  },
+  {
+    "item": "Mushroom soup",
+    "emojiId": "1546202487969550407",
+    "emojiName": "mushroomsoup"
+  },
+  {
+    "item": "Olive dip",
+    "emojiId": "1546202486711521300",
+    "emojiName": "olivedip"
+  },
+  {
+    "item": "Olive oil",
+    "emojiId": "1546202485448777839",
+    "emojiName": "oliveoil"
+  },
+  {
+    "item": "Onion",
+    "emojiId": "1546202484081434655",
+    "emojiName": "onion"
+  },
+  {
+    "item": "Orange tea",
+    "emojiId": "1546202482315755600",
+    "emojiName": "orangetea"
+  },
+  {
+    "item": "Peony",
+    "emojiId": "1546202480273260585",
+    "emojiName": "peony"
+  },
+  {
+    "item": "Pineapple",
+    "emojiId": "1546202478582956232",
+    "emojiName": "pineapple"
+  },
+  {
+    "item": "Pineapple cake",
+    "emojiId": "1546202476699713638",
+    "emojiName": "pineapplecake"
+  },
+  {
+    "item": "Pineapple juice",
+    "emojiId": "1546202475613266001",
+    "emojiName": "pineapplejuice"
+  },
+  {
+    "item": "Plum smoothie",
+    "emojiId": "1546202474552234123",
+    "emojiName": "plumsmoothie"
+  },
+  {
+    "item": "Potato",
+    "emojiId": "1546202473356595200",
+    "emojiName": "potato"
+  },
+  {
+    "item": "Potato bread",
+    "emojiId": "1546202472257683506",
+    "emojiName": "potatobread"
+  },
+  {
+    "item": "Pumpkin",
+    "emojiId": "1546202470815109191",
+    "emojiName": "pumpkin"
+  },
+  {
+    "item": "Pumpkin pie",
+    "emojiId": "1546202468898312192",
+    "emojiName": "pumpkinpie"
+  },
+  {
+    "item": "Quesadilla",
+    "emojiId": "1546202467820245063",
+    "emojiName": "quesadilla"
+  },
+  {
+    "item": "Raspberry candle",
+    "emojiId": "1546202466440454146",
+    "emojiName": "raspberrycandle"
+  },
+  {
+    "item": "Raspberry muffin",
+    "emojiId": "1546202465433817098",
+    "emojiName": "raspberrymuffin"
+  },
+  {
+    "item": "Red berry cake",
+    "emojiId": "1546202464003559454",
+    "emojiName": "redberrycake"
+  },
+  {
+    "item": "Rice",
+    "emojiId": "1546202462699131021",
+    "emojiName": "rice"
+  },
+  {
+    "item": "Roasted tomatoes",
+    "emojiId": "1546202461167947898",
+    "emojiName": "roastedtomatoes"
+  },
+  {
+    "item": "Rustic bouquet",
+    "emojiId": "1546202459326652416",
+    "emojiName": "rusticbouquet"
+  },
+  {
+    "item": "Sesame",
+    "emojiId": "1546202455958880267",
+    "emojiName": "sesame"
+  },
+  {
+    "item": "Sesame brittle",
+    "emojiId": "1546202454817906728",
+    "emojiName": "sesamebrittle"
+  },
+  {
+    "item": "Sesame ice cream",
+    "emojiId": "1546202453739835523",
+    "emojiName": "sesameicecream"
+  },
+  {
+    "item": "Soybean",
+    "emojiId": "1546202452527812748",
+    "emojiName": "soybean"
+  },
+  {
+    "item": "Strawberry",
+    "emojiId": "1546202450938040461",
+    "emojiName": "strawberry"
+  },
+  {
+    "item": "Strawberry candle",
+    "emojiId": "1546202449348395150",
+    "emojiName": "strawberrycandle"
+  },
+  {
+    "item": "Sugarcane",
+    "emojiId": "1546202447221886976",
+    "emojiName": "sugarcane"
+  },
+  {
+    "item": "Summer rolls",
+    "emojiId": "1546202445808668713",
+    "emojiName": "summerrolls"
+  },
+  {
+    "item": "Sunflower",
+    "emojiId": "1546202444621680650",
+    "emojiName": "sunflower"
+  },
+  {
+    "item": "Sushi roll",
+    "emojiId": "1546202442864271412",
+    "emojiName": "sushiroll"
+  },
+  {
+    "item": "Sweater",
+    "emojiId": "1546202441161117787",
+    "emojiName": "sweater"
+  },
+  {
+    "item": "Syrup",
+    "emojiId": "1546202439760478249",
+    "emojiName": "syrup"
+  },
+  {
+    "item": "Taco",
+    "emojiId": "1546202438573228174",
+    "emojiName": "taco"
+  },
+  {
+    "item": "Tea leaf",
+    "emojiId": "1546202437449293954",
+    "emojiName": "tealeaf"
+  },
+  {
+    "item": "Toffee",
+    "emojiId": "1546202436266365081",
+    "emojiName": "toffee"
+  },
+  {
+    "item": "Tofu dog",
+    "emojiId": "1546202434592972800",
+    "emojiName": "tofudog"
+  },
+  {
+    "item": "Tomato",
+    "emojiId": "1546202432881561650",
+    "emojiName": "tomato"
+  },
+  {
+    "item": "Tomato juice",
+    "emojiId": "1546202431145250867",
+    "emojiName": "tomatojuice"
+  },
+  {
+    "item": "Vanilla ice cream",
+    "emojiId": "1546202429215744000",
+    "emojiName": "vanillaicecream"
+  },
+  {
+    "item": "Watermelon",
+    "emojiId": "1546202427471036416",
+    "emojiName": "watermelon"
+  },
+  {
+    "item": "Watermelon juice",
+    "emojiId": "1546202425281740930",
+    "emojiName": "watermelonjuice"
+  },
+  {
+    "item": "Wheat",
+    "emojiId": "1546202423687774249",
+    "emojiName": "wheat"
+  },
+  {
+    "item": "Wool",
+    "emojiId": "1546202421687095358",
+    "emojiName": "wool"
+  },
+  {
+    "item": "Yogurt smoothie",
+    "emojiId": "1546202420563017789",
+    "emojiName": "yogurtsmoothie"
+  }
+]

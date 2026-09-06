@@ -1,0 +1,2092 @@
+[
+  {
+    "name": "Wheat",
+    "slug": "wheat",
+    "file": "assets/hayday-icons/wheat.png"
+  },
+  {
+    "name": "Egg",
+    "slug": "egg",
+    "file": "assets/hayday-icons/egg.png"
+  },
+  {
+    "name": "Corn",
+    "slug": "corn",
+    "file": "assets/hayday-icons/corn.png"
+  },
+  {
+    "name": "Chicken feed",
+    "slug": "chicken-feed",
+    "file": "assets/hayday-icons/chicken-feed.png"
+  },
+  {
+    "name": "Bread",
+    "slug": "bread",
+    "file": "assets/hayday-icons/bread.png"
+  },
+  {
+    "name": "Soybean",
+    "slug": "soybean",
+    "file": "assets/hayday-icons/soybean.png"
+  },
+  {
+    "name": "Cow feed",
+    "slug": "cow-feed",
+    "file": "assets/hayday-icons/cow-feed.png"
+  },
+  {
+    "name": "Milk",
+    "slug": "milk",
+    "file": "assets/hayday-icons/milk.png"
+  },
+  {
+    "name": "Cream",
+    "slug": "cream",
+    "file": "assets/hayday-icons/cream.png"
+  },
+  {
+    "name": "Sugarcane",
+    "slug": "sugarcane",
+    "file": "assets/hayday-icons/sugarcane.png"
+  },
+  {
+    "name": "Corn bread",
+    "slug": "corn-bread",
+    "file": "assets/hayday-icons/corn-bread.png"
+  },
+  {
+    "name": "Brown sugar",
+    "slug": "brown-sugar",
+    "file": "assets/hayday-icons/brown-sugar.png"
+  },
+  {
+    "name": "Popcorn",
+    "slug": "popcorn",
+    "file": "assets/hayday-icons/popcorn.png"
+  },
+  {
+    "name": "Carrot",
+    "slug": "carrot",
+    "file": "assets/hayday-icons/carrot.png"
+  },
+  {
+    "name": "Butter",
+    "slug": "butter",
+    "file": "assets/hayday-icons/butter.png"
+  },
+  {
+    "name": "Pancake",
+    "slug": "pancake",
+    "file": "assets/hayday-icons/pancake.png"
+  },
+  {
+    "name": "Pig feed",
+    "slug": "pig-feed",
+    "file": "assets/hayday-icons/pig-feed.png"
+  },
+  {
+    "name": "Bacon",
+    "slug": "bacon",
+    "file": "assets/hayday-icons/bacon.png"
+  },
+  {
+    "name": "Cookie",
+    "slug": "cookie",
+    "file": "assets/hayday-icons/cookie.png"
+  },
+  {
+    "name": "Bacon and eggs",
+    "slug": "bacon-and-eggs",
+    "file": "assets/hayday-icons/bacon-and-eggs.png"
+  },
+  {
+    "name": "Cheese",
+    "slug": "cheese",
+    "file": "assets/hayday-icons/cheese.png"
+  },
+  {
+    "name": "Indigo",
+    "slug": "indigo",
+    "file": "assets/hayday-icons/indigo.png"
+  },
+  {
+    "name": "White sugar",
+    "slug": "white-sugar",
+    "file": "assets/hayday-icons/white-sugar.png"
+  },
+  {
+    "name": "Carrot pie",
+    "slug": "carrot-pie",
+    "file": "assets/hayday-icons/carrot-pie.png"
+  },
+  {
+    "name": "Pumpkin",
+    "slug": "pumpkin",
+    "file": "assets/hayday-icons/pumpkin.png"
+  },
+  {
+    "name": "Pumpkin pie",
+    "slug": "pumpkin-pie",
+    "file": "assets/hayday-icons/pumpkin-pie.png"
+  },
+  {
+    "name": "Apple",
+    "slug": "apple",
+    "file": "assets/hayday-icons/apple.png"
+  },
+  {
+    "name": "Sheep feed",
+    "slug": "sheep-feed",
+    "file": "assets/hayday-icons/sheep-feed.png"
+  },
+  {
+    "name": "Wool",
+    "slug": "wool",
+    "file": "assets/hayday-icons/wool.png"
+  },
+  {
+    "name": "Buttered popcorn",
+    "slug": "buttered-popcorn",
+    "file": "assets/hayday-icons/buttered-popcorn.png"
+  },
+  {
+    "name": "Sweater",
+    "slug": "sweater",
+    "file": "assets/hayday-icons/sweater.png"
+  },
+  {
+    "name": "Cotton",
+    "slug": "cotton",
+    "file": "assets/hayday-icons/cotton.png"
+  },
+  {
+    "name": "Bacon pie",
+    "slug": "bacon-pie",
+    "file": "assets/hayday-icons/bacon-pie.png"
+  },
+  {
+    "name": "Syrup",
+    "slug": "syrup",
+    "file": "assets/hayday-icons/syrup.png"
+  },
+  {
+    "name": "Cotton fabric",
+    "slug": "cotton-fabric",
+    "file": "assets/hayday-icons/cotton-fabric.png"
+  },
+  {
+    "name": "Hamburger",
+    "slug": "hamburger",
+    "file": "assets/hayday-icons/hamburger.png"
+  },
+  {
+    "name": "Raspberry",
+    "slug": "raspberry",
+    "file": "assets/hayday-icons/raspberry.png"
+  },
+  {
+    "name": "Raspberry muffin",
+    "slug": "raspberry-muffin",
+    "file": "assets/hayday-icons/raspberry-muffin.png"
+  },
+  {
+    "name": "Blue woolly hat",
+    "slug": "blue-woolly-hat",
+    "file": "assets/hayday-icons/blue-woolly-hat.png"
+  },
+  {
+    "name": "Cotton shirt",
+    "slug": "cotton-shirt",
+    "file": "assets/hayday-icons/cotton-shirt.png"
+  },
+  {
+    "name": "Blue sweater",
+    "slug": "blue-sweater",
+    "file": "assets/hayday-icons/blue-sweater.png"
+  },
+  {
+    "name": "Carrot cake",
+    "slug": "carrot-cake",
+    "file": "assets/hayday-icons/carrot-cake.png"
+  },
+  {
+    "name": "Wooly chaps",
+    "slug": "wooly-chaps",
+    "file": "assets/hayday-icons/wooly-chaps.png"
+  },
+  {
+    "name": "Cherry",
+    "slug": "cherry",
+    "file": "assets/hayday-icons/cherry.png"
+  },
+  {
+    "name": "Cream cake",
+    "slug": "cream-cake",
+    "file": "assets/hayday-icons/cream-cake.png"
+  },
+  {
+    "name": "Red berry cake",
+    "slug": "red-berry-cake",
+    "file": "assets/hayday-icons/red-berry-cake.png"
+  },
+  {
+    "name": "Cheesecake",
+    "slug": "cheesecake",
+    "file": "assets/hayday-icons/cheesecake.png"
+  },
+  {
+    "name": "Silver ore",
+    "slug": "silver-ore",
+    "file": "assets/hayday-icons/silver-ore.png"
+  },
+  {
+    "name": "Gold ore",
+    "slug": "gold-ore",
+    "file": "assets/hayday-icons/gold-ore.png"
+  },
+  {
+    "name": "Platinum ore",
+    "slug": "platinum-ore",
+    "file": "assets/hayday-icons/platinum-ore.png"
+  },
+  {
+    "name": "Silver bar",
+    "slug": "silver-bar",
+    "file": "assets/hayday-icons/silver-bar.png"
+  },
+  {
+    "name": "Chili pepper",
+    "slug": "chili-pepper",
+    "file": "assets/hayday-icons/chili-pepper.png"
+  },
+  {
+    "name": "Black bean",
+    "slug": "black-bean",
+    "file": "assets/hayday-icons/black-bean.png"
+  },
+  {
+    "name": "Chili popcorn",
+    "slug": "chili-popcorn",
+    "file": "assets/hayday-icons/chili-popcorn.png"
+  },
+  {
+    "name": "Gold bar",
+    "slug": "gold-bar",
+    "file": "assets/hayday-icons/gold-bar.png"
+  },
+  {
+    "name": "Platinum bar",
+    "slug": "platinum-bar",
+    "file": "assets/hayday-icons/platinum-bar.png"
+  },
+  {
+    "name": "Violet dress",
+    "slug": "violet-dress",
+    "file": "assets/hayday-icons/violet-dress.png"
+  },
+  {
+    "name": "Lamb feed",
+    "slug": "lamb-feed",
+    "file": "assets/hayday-icons/lamb-feed.png"
+  },
+  {
+    "name": "Lamb chop",
+    "slug": "lamb-chop",
+    "file": "assets/hayday-icons/lamb-chop.png"
+  },
+  {
+    "name": "Grilled lamb skewer",
+    "slug": "grilled-lamb-skewer",
+    "file": "assets/hayday-icons/grilled-lamb-skewer.png"
+  },
+  {
+    "name": "Blackberry",
+    "slug": "blackberry",
+    "file": "assets/hayday-icons/blackberry.png"
+  },
+  {
+    "name": "Blackberry muffin",
+    "slug": "blackberry-muffin",
+    "file": "assets/hayday-icons/blackberry-muffin.png"
+  },
+  {
+    "name": "Carrot juice",
+    "slug": "carrot-juice",
+    "file": "assets/hayday-icons/carrot-juice.png"
+  },
+  {
+    "name": "Red lure",
+    "slug": "red-lure",
+    "file": "assets/hayday-icons/red-lure.png"
+  },
+  {
+    "name": "Green lure",
+    "slug": "green-lure",
+    "file": "assets/hayday-icons/green-lure.png"
+  },
+  {
+    "name": "Blue lure",
+    "slug": "blue-lure",
+    "file": "assets/hayday-icons/blue-lure.png"
+  },
+  {
+    "name": "Purple lure",
+    "slug": "purple-lure",
+    "file": "assets/hayday-icons/purple-lure.png"
+  },
+  {
+    "name": "Gold lure",
+    "slug": "gold-lure",
+    "file": "assets/hayday-icons/gold-lure.png"
+  },
+  {
+    "name": "Fish fillet",
+    "slug": "fish-fillet",
+    "file": "assets/hayday-icons/fish-fillet.png"
+  },
+  {
+    "name": "Fish burger",
+    "slug": "fish-burger",
+    "file": "assets/hayday-icons/fish-burger.png"
+  },
+  {
+    "name": "Apple pie",
+    "slug": "apple-pie",
+    "file": "assets/hayday-icons/apple-pie.png"
+  },
+  {
+    "name": "Fish pie",
+    "slug": "fish-pie",
+    "file": "assets/hayday-icons/fish-pie.png"
+  },
+  {
+    "name": "Apple juice",
+    "slug": "apple-juice",
+    "file": "assets/hayday-icons/apple-juice.png"
+  },
+  {
+    "name": "Vanilla ice cream",
+    "slug": "vanilla-ice-cream",
+    "file": "assets/hayday-icons/vanilla-ice-cream.png"
+  },
+  {
+    "name": "Tomato",
+    "slug": "tomato",
+    "file": "assets/hayday-icons/tomato.png"
+  },
+  {
+    "name": "Roasted tomatoes",
+    "slug": "roasted-tomatoes",
+    "file": "assets/hayday-icons/roasted-tomatoes.png"
+  },
+  {
+    "name": "Cherry juice",
+    "slug": "cherry-juice",
+    "file": "assets/hayday-icons/cherry-juice.png"
+  },
+  {
+    "name": "Fishing net",
+    "slug": "fishing-net",
+    "file": "assets/hayday-icons/fishing-net.png"
+  },
+  {
+    "name": "Mystery net",
+    "slug": "mystery-net",
+    "file": "assets/hayday-icons/mystery-net.png"
+  },
+  {
+    "name": "Blueberries",
+    "slug": "blueberries",
+    "file": "assets/hayday-icons/blueberries.png"
+  },
+  {
+    "name": "Tomato juice",
+    "slug": "tomato-juice",
+    "file": "assets/hayday-icons/tomato-juice.png"
+  },
+  {
+    "name": "Berry juice",
+    "slug": "berry-juice",
+    "file": "assets/hayday-icons/berry-juice.png"
+  },
+  {
+    "name": "Blueberry cheesecake",
+    "slug": "blueberry-cheesecake",
+    "file": "assets/hayday-icons/blueberry-cheesecake.png"
+  },
+  {
+    "name": "Goat feed",
+    "slug": "goat-feed",
+    "file": "assets/hayday-icons/goat-feed.png"
+  },
+  {
+    "name": "Goat milk",
+    "slug": "goat-milk",
+    "file": "assets/hayday-icons/goat-milk.png"
+  },
+  {
+    "name": "Lamb doner wrap",
+    "slug": "lamb-doner-wrap",
+    "file": "assets/hayday-icons/lamb-doner-wrap.png"
+  },
+  {
+    "name": "Spicy bean doner",
+    "slug": "spicy-bean-doner",
+    "file": "assets/hayday-icons/spicy-bean-doner.png"
+  },
+  {
+    "name": "Goat cheese",
+    "slug": "goat-cheese",
+    "file": "assets/hayday-icons/goat-cheese.png"
+  },
+  {
+    "name": "Pizza",
+    "slug": "pizza",
+    "file": "assets/hayday-icons/pizza.png"
+  },
+  {
+    "name": "Coal",
+    "slug": "coal",
+    "file": "assets/hayday-icons/coal.png"
+  },
+  {
+    "name": "Refined coal",
+    "slug": "refined-coal",
+    "file": "assets/hayday-icons/refined-coal.png"
+  },
+  {
+    "name": "Cherry popsicle",
+    "slug": "cherry-popsicle",
+    "file": "assets/hayday-icons/cherry-popsicle.png"
+  },
+  {
+    "name": "Blueberry muffin",
+    "slug": "blueberry-muffin",
+    "file": "assets/hayday-icons/blueberry-muffin.png"
+  },
+  {
+    "name": "Strawberry",
+    "slug": "strawberry",
+    "file": "assets/hayday-icons/strawberry.png"
+  },
+  {
+    "name": "Feta pie",
+    "slug": "feta-pie",
+    "file": "assets/hayday-icons/feta-pie.png"
+  },
+  {
+    "name": "Iron ore",
+    "slug": "iron-ore",
+    "file": "assets/hayday-icons/iron-ore.png"
+  },
+  {
+    "name": "Iron bar",
+    "slug": "iron-bar",
+    "file": "assets/hayday-icons/iron-bar.png"
+  },
+  {
+    "name": "Strawberry ice cream",
+    "slug": "strawberry-ice-cream",
+    "file": "assets/hayday-icons/strawberry-ice-cream.png"
+  },
+  {
+    "name": "Wheat bundle",
+    "slug": "wheat-bundle",
+    "file": "assets/hayday-icons/wheat-bundle.png"
+  },
+  {
+    "name": "Meat bucket",
+    "slug": "meat-bucket",
+    "file": "assets/hayday-icons/meat-bucket.png"
+  },
+  {
+    "name": "Potato",
+    "slug": "potato",
+    "file": "assets/hayday-icons/potato.png"
+  },
+  {
+    "name": "Strawberry cake",
+    "slug": "strawberry-cake",
+    "file": "assets/hayday-icons/strawberry-cake.png"
+  },
+  {
+    "name": "Baked potato",
+    "slug": "baked-potato",
+    "file": "assets/hayday-icons/baked-potato.png"
+  },
+  {
+    "name": "Apple jam",
+    "slug": "apple-jam",
+    "file": "assets/hayday-icons/apple-jam.png"
+  },
+  {
+    "name": "Chocolate cake",
+    "slug": "chocolate-cake",
+    "file": "assets/hayday-icons/chocolate-cake.png"
+  },
+  {
+    "name": "Casserole",
+    "slug": "casserole",
+    "file": "assets/hayday-icons/casserole.png"
+  },
+  {
+    "name": "Cacao",
+    "slug": "cacao",
+    "file": "assets/hayday-icons/cacao.png"
+  },
+  {
+    "name": "Raspberry jam",
+    "slug": "raspberry-jam",
+    "file": "assets/hayday-icons/raspberry-jam.png"
+  },
+  {
+    "name": "Spicy pizza",
+    "slug": "spicy-pizza",
+    "file": "assets/hayday-icons/spicy-pizza.png"
+  },
+  {
+    "name": "Blackberry jam",
+    "slug": "blackberry-jam",
+    "file": "assets/hayday-icons/blackberry-jam.png"
+  },
+  {
+    "name": "Potato feta cake",
+    "slug": "potato-feta-cake",
+    "file": "assets/hayday-icons/potato-feta-cake.png"
+  },
+  {
+    "name": "Cherry jam",
+    "slug": "cherry-jam",
+    "file": "assets/hayday-icons/cherry-jam.png"
+  },
+  {
+    "name": "Bracelet",
+    "slug": "bracelet",
+    "file": "assets/hayday-icons/bracelet.png"
+  },
+  {
+    "name": "Potato bread",
+    "slug": "potato-bread",
+    "file": "assets/hayday-icons/potato-bread.png"
+  },
+  {
+    "name": "Shepherd's pie",
+    "slug": "shepherd-s-pie",
+    "file": "assets/hayday-icons/shepherd-s-pie.png"
+  },
+  {
+    "name": "Chocolate ice cream",
+    "slug": "chocolate-ice-cream",
+    "file": "assets/hayday-icons/chocolate-ice-cream.png"
+  },
+  {
+    "name": "Honeycomb",
+    "slug": "honeycomb",
+    "file": "assets/hayday-icons/honeycomb.png"
+  },
+  {
+    "name": "Necklace",
+    "slug": "necklace",
+    "file": "assets/hayday-icons/necklace.png"
+  },
+  {
+    "name": "Honey",
+    "slug": "honey",
+    "file": "assets/hayday-icons/honey.png"
+  },
+  {
+    "name": "Honey popcorn",
+    "slug": "honey-popcorn",
+    "file": "assets/hayday-icons/honey-popcorn.png"
+  },
+  {
+    "name": "Diamond ring",
+    "slug": "diamond-ring",
+    "file": "assets/hayday-icons/diamond-ring.png"
+  },
+  {
+    "name": "Fish and chips",
+    "slug": "fish-and-chips",
+    "file": "assets/hayday-icons/fish-and-chips.png"
+  },
+  {
+    "name": "Iron bracelet",
+    "slug": "iron-bracelet",
+    "file": "assets/hayday-icons/iron-bracelet.png"
+  },
+  {
+    "name": "Coffee bean",
+    "slug": "coffee-bean",
+    "file": "assets/hayday-icons/coffee-bean.png"
+  },
+  {
+    "name": "Espresso",
+    "slug": "espresso",
+    "file": "assets/hayday-icons/espresso.png"
+  },
+  {
+    "name": "Honey apple cake",
+    "slug": "honey-apple-cake",
+    "file": "assets/hayday-icons/honey-apple-cake.png"
+  },
+  {
+    "name": "Caff\u00e8 latte",
+    "slug": "caff-latte",
+    "file": "assets/hayday-icons/caff-latte.png"
+  },
+  {
+    "name": "Chocolate popcorn",
+    "slug": "chocolate-popcorn",
+    "file": "assets/hayday-icons/chocolate-popcorn.png"
+  },
+  {
+    "name": "Lobster trap",
+    "slug": "lobster-trap",
+    "file": "assets/hayday-icons/lobster-trap.png"
+  },
+  {
+    "name": "Lobster tail",
+    "slug": "lobster-tail",
+    "file": "assets/hayday-icons/lobster-tail.png"
+  },
+  {
+    "name": "Frutti di Mare pizza",
+    "slug": "frutti-di-mare-pizza",
+    "file": "assets/hayday-icons/frutti-di-mare-pizza.png"
+  },
+  {
+    "name": "Caff\u00e8 mocha",
+    "slug": "caff-mocha",
+    "file": "assets/hayday-icons/caff-mocha.png"
+  },
+  {
+    "name": "Chamomile",
+    "slug": "chamomile",
+    "file": "assets/hayday-icons/chamomile.png"
+  },
+  {
+    "name": "Soothing pad",
+    "slug": "soothing-pad",
+    "file": "assets/hayday-icons/soothing-pad.png"
+  },
+  {
+    "name": "Raspberry mocha",
+    "slug": "raspberry-mocha",
+    "file": "assets/hayday-icons/raspberry-mocha.png"
+  },
+  {
+    "name": "Lobster soup",
+    "slug": "lobster-soup",
+    "file": "assets/hayday-icons/lobster-soup.png"
+  },
+  {
+    "name": "Lamb soup",
+    "slug": "lamb-soup",
+    "file": "assets/hayday-icons/lamb-soup.png"
+  },
+  {
+    "name": "Hot chocolate",
+    "slug": "hot-chocolate",
+    "file": "assets/hayday-icons/hot-chocolate.png"
+  },
+  {
+    "name": "Tomato soup",
+    "slug": "tomato-soup",
+    "file": "assets/hayday-icons/tomato-soup.png"
+  },
+  {
+    "name": "Red scarf",
+    "slug": "red-scarf",
+    "file": "assets/hayday-icons/red-scarf.png"
+  },
+  {
+    "name": "Lobster skewer",
+    "slug": "lobster-skewer",
+    "file": "assets/hayday-icons/lobster-skewer.png"
+  },
+  {
+    "name": "Beeswax",
+    "slug": "beeswax",
+    "file": "assets/hayday-icons/beeswax.png"
+  },
+  {
+    "name": "Strawberry candle",
+    "slug": "strawberry-candle",
+    "file": "assets/hayday-icons/strawberry-candle.png"
+  },
+  {
+    "name": "Rustic bouquet",
+    "slug": "rustic-bouquet",
+    "file": "assets/hayday-icons/rustic-bouquet.png"
+  },
+  {
+    "name": "Pumpkin soup",
+    "slug": "pumpkin-soup",
+    "file": "assets/hayday-icons/pumpkin-soup.png"
+  },
+  {
+    "name": "Asparagus",
+    "slug": "asparagus",
+    "file": "assets/hayday-icons/asparagus.png"
+  },
+  {
+    "name": "Asparagus quiche",
+    "slug": "asparagus-quiche",
+    "file": "assets/hayday-icons/asparagus-quiche.png"
+  },
+  {
+    "name": "Strawberry jam",
+    "slug": "strawberry-jam",
+    "file": "assets/hayday-icons/strawberry-jam.png"
+  },
+  {
+    "name": "Duck trap",
+    "slug": "duck-trap",
+    "file": "assets/hayday-icons/duck-trap.png"
+  },
+  {
+    "name": "Duck feather",
+    "slug": "duck-feather",
+    "file": "assets/hayday-icons/duck-feather.png"
+  },
+  {
+    "name": "Sesame",
+    "slug": "sesame",
+    "file": "assets/hayday-icons/sesame.png"
+  },
+  {
+    "name": "Sesame ice cream",
+    "slug": "sesame-ice-cream",
+    "file": "assets/hayday-icons/sesame-ice-cream.png"
+  },
+  {
+    "name": "Caramel apple",
+    "slug": "caramel-apple",
+    "file": "assets/hayday-icons/caramel-apple.png"
+  },
+  {
+    "name": "Pillow",
+    "slug": "pillow",
+    "file": "assets/hayday-icons/pillow.png"
+  },
+  {
+    "name": "Asparagus soup",
+    "slug": "asparagus-soup",
+    "file": "assets/hayday-icons/asparagus-soup.png"
+  },
+  {
+    "name": "Toffee",
+    "slug": "toffee",
+    "file": "assets/hayday-icons/toffee.png"
+  },
+  {
+    "name": "Raspberry candle",
+    "slug": "raspberry-candle",
+    "file": "assets/hayday-icons/raspberry-candle.png"
+  },
+  {
+    "name": "Pineapple",
+    "slug": "pineapple",
+    "file": "assets/hayday-icons/pineapple.png"
+  },
+  {
+    "name": "Pineapple juice",
+    "slug": "pineapple-juice",
+    "file": "assets/hayday-icons/pineapple-juice.png"
+  },
+  {
+    "name": "Fish soup",
+    "slug": "fish-soup",
+    "file": "assets/hayday-icons/fish-soup.png"
+  },
+  {
+    "name": "Lily",
+    "slug": "lily",
+    "file": "assets/hayday-icons/lily.png"
+  },
+  {
+    "name": "Soy sauce",
+    "slug": "soy-sauce",
+    "file": "assets/hayday-icons/soy-sauce.png"
+  },
+  {
+    "name": "Chocolate",
+    "slug": "chocolate",
+    "file": "assets/hayday-icons/chocolate.png"
+  },
+  {
+    "name": "Bean dip",
+    "slug": "bean-dip",
+    "file": "assets/hayday-icons/bean-dip.png"
+  },
+  {
+    "name": "Fancy cake",
+    "slug": "fancy-cake",
+    "file": "assets/hayday-icons/fancy-cake.png"
+  },
+  {
+    "name": "Rice",
+    "slug": "rice",
+    "file": "assets/hayday-icons/rice.png"
+  },
+  {
+    "name": "Sushi roll",
+    "slug": "sushi-roll",
+    "file": "assets/hayday-icons/sushi-roll.png"
+  },
+  {
+    "name": "Olive",
+    "slug": "olive",
+    "file": "assets/hayday-icons/olive.png"
+  },
+  {
+    "name": "Lollipop",
+    "slug": "lollipop",
+    "file": "assets/hayday-icons/lollipop.png"
+  },
+  {
+    "name": "Lettuce",
+    "slug": "lettuce",
+    "file": "assets/hayday-icons/lettuce.png"
+  },
+  {
+    "name": "Feta salad",
+    "slug": "feta-salad",
+    "file": "assets/hayday-icons/feta-salad.png"
+  },
+  {
+    "name": "Bean salad",
+    "slug": "bean-salad",
+    "file": "assets/hayday-icons/bean-salad.png"
+  },
+  {
+    "name": "Tower doner supreme",
+    "slug": "tower-doner-supreme",
+    "file": "assets/hayday-icons/tower-doner-supreme.png"
+  },
+  {
+    "name": "Lobster sushi",
+    "slug": "lobster-sushi",
+    "file": "assets/hayday-icons/lobster-sushi.png"
+  },
+  {
+    "name": "Blanket",
+    "slug": "blanket",
+    "file": "assets/hayday-icons/blanket.png"
+  },
+  {
+    "name": "Jelly beans",
+    "slug": "jelly-beans",
+    "file": "assets/hayday-icons/jelly-beans.png"
+  },
+  {
+    "name": "Olive oil",
+    "slug": "olive-oil",
+    "file": "assets/hayday-icons/olive-oil.png"
+  },
+  {
+    "name": "Garlic",
+    "slug": "garlic",
+    "file": "assets/hayday-icons/garlic.png"
+  },
+  {
+    "name": "Garlic bread",
+    "slug": "garlic-bread",
+    "file": "assets/hayday-icons/garlic-bread.png"
+  },
+  {
+    "name": "Veggie bagel",
+    "slug": "veggie-bagel",
+    "file": "assets/hayday-icons/veggie-bagel.png"
+  },
+  {
+    "name": "Mayonnaise",
+    "slug": "mayonnaise",
+    "file": "assets/hayday-icons/mayonnaise.png"
+  },
+  {
+    "name": "BLT salad",
+    "slug": "blt-salad",
+    "file": "assets/hayday-icons/blt-salad.png"
+  },
+  {
+    "name": "Caramel latte",
+    "slug": "caramel-latte",
+    "file": "assets/hayday-icons/caramel-latte.png"
+  },
+  {
+    "name": "Peanuts",
+    "slug": "peanuts",
+    "file": "assets/hayday-icons/peanuts.png"
+  },
+  {
+    "name": "Sunflower",
+    "slug": "sunflower",
+    "file": "assets/hayday-icons/sunflower.png"
+  },
+  {
+    "name": "Egg sushi",
+    "slug": "egg-sushi",
+    "file": "assets/hayday-icons/egg-sushi.png"
+  },
+  {
+    "name": "Honey peanuts",
+    "slug": "honey-peanuts",
+    "file": "assets/hayday-icons/honey-peanuts.png"
+  },
+  {
+    "name": "Seafood salad",
+    "slug": "seafood-salad",
+    "file": "assets/hayday-icons/seafood-salad.png"
+  },
+  {
+    "name": "Berry smoothie",
+    "slug": "berry-smoothie",
+    "file": "assets/hayday-icons/berry-smoothie.png"
+  },
+  {
+    "name": "Snack mix",
+    "slug": "snack-mix",
+    "file": "assets/hayday-icons/snack-mix.png"
+  },
+  {
+    "name": "Bright bouquet",
+    "slug": "bright-bouquet",
+    "file": "assets/hayday-icons/bright-bouquet.png"
+  },
+  {
+    "name": "Bacon toast",
+    "slug": "bacon-toast",
+    "file": "assets/hayday-icons/bacon-toast.png"
+  },
+  {
+    "name": "Pineapple cake",
+    "slug": "pineapple-cake",
+    "file": "assets/hayday-icons/pineapple-cake.png"
+  },
+  {
+    "name": "Chocolate pie",
+    "slug": "chocolate-pie",
+    "file": "assets/hayday-icons/chocolate-pie.png"
+  },
+  {
+    "name": "Cabbage",
+    "slug": "cabbage",
+    "file": "assets/hayday-icons/cabbage.png"
+  },
+  {
+    "name": "Cabbage soup",
+    "slug": "cabbage-soup",
+    "file": "assets/hayday-icons/cabbage-soup.png"
+  },
+  {
+    "name": "Lemon",
+    "slug": "lemon",
+    "file": "assets/hayday-icons/lemon.png"
+  },
+  {
+    "name": "Lemon curd",
+    "slug": "lemon-curd",
+    "file": "assets/hayday-icons/lemon-curd.png"
+  },
+  {
+    "name": "Olive dip",
+    "slug": "olive-dip",
+    "file": "assets/hayday-icons/olive-dip.png"
+  },
+  {
+    "name": "Egg sandwich",
+    "slug": "egg-sandwich",
+    "file": "assets/hayday-icons/egg-sandwich.png"
+  },
+  {
+    "name": "Green smoothie",
+    "slug": "green-smoothie",
+    "file": "assets/hayday-icons/green-smoothie.png"
+  },
+  {
+    "name": "Fresh pasta",
+    "slug": "fresh-pasta",
+    "file": "assets/hayday-icons/fresh-pasta.png"
+  },
+  {
+    "name": "Pasta salad",
+    "slug": "pasta-salad",
+    "file": "assets/hayday-icons/pasta-salad.png"
+  },
+  {
+    "name": "Lemon pie",
+    "slug": "lemon-pie",
+    "file": "assets/hayday-icons/lemon-pie.png"
+  },
+  {
+    "name": "Grilled asparagus",
+    "slug": "grilled-asparagus",
+    "file": "assets/hayday-icons/grilled-asparagus.png"
+  },
+  {
+    "name": "Onion",
+    "slug": "onion",
+    "file": "assets/hayday-icons/onion.png"
+  },
+  {
+    "name": "Grilled onion",
+    "slug": "grilled-onion",
+    "file": "assets/hayday-icons/grilled-onion.png"
+  },
+  {
+    "name": "Lemon cake",
+    "slug": "lemon-cake",
+    "file": "assets/hayday-icons/lemon-cake.png"
+  },
+  {
+    "name": "Lemon essential oil",
+    "slug": "lemon-essential-oil",
+    "file": "assets/hayday-icons/lemon-essential-oil.png"
+  },
+  {
+    "name": "Peanut butter milkshake",
+    "slug": "peanut-butter-milkshake",
+    "file": "assets/hayday-icons/peanut-butter-milkshake.png"
+  },
+  {
+    "name": "Tomato sauce",
+    "slug": "tomato-sauce",
+    "file": "assets/hayday-icons/tomato-sauce.png"
+  },
+  {
+    "name": "Honey toast",
+    "slug": "honey-toast",
+    "file": "assets/hayday-icons/honey-toast.png"
+  },
+  {
+    "name": "Fried rice",
+    "slug": "fried-rice",
+    "file": "assets/hayday-icons/fried-rice.png"
+  },
+  {
+    "name": "Lamb stir fry",
+    "slug": "lamb-stir-fry",
+    "file": "assets/hayday-icons/lamb-stir-fry.png"
+  },
+  {
+    "name": "Yogurt smoothie",
+    "slug": "yogurt-smoothie",
+    "file": "assets/hayday-icons/yogurt-smoothie.png"
+  },
+  {
+    "name": "Cloche hat",
+    "slug": "cloche-hat",
+    "file": "assets/hayday-icons/cloche-hat.png"
+  },
+  {
+    "name": "Cucumber",
+    "slug": "cucumber",
+    "file": "assets/hayday-icons/cucumber.png"
+  },
+  {
+    "name": "Cucumber smoothie",
+    "slug": "cucumber-smoothie",
+    "file": "assets/hayday-icons/cucumber-smoothie.png"
+  },
+  {
+    "name": "Blueberry chutney",
+    "slug": "blueberry-chutney",
+    "file": "assets/hayday-icons/blueberry-chutney.png"
+  },
+  {
+    "name": "Orange",
+    "slug": "orange",
+    "file": "assets/hayday-icons/orange.png"
+  },
+  {
+    "name": "Flower shawl",
+    "slug": "flower-shawl",
+    "file": "assets/hayday-icons/flower-shawl.png"
+  },
+  {
+    "name": "Orange juice",
+    "slug": "orange-juice",
+    "file": "assets/hayday-icons/orange-juice.png"
+  },
+  {
+    "name": "Peanut butter and jelly sandwich",
+    "slug": "peanut-butter-and-jelly-sandwich",
+    "file": "assets/hayday-icons/peanut-butter-and-jelly-sandwich.png"
+  },
+  {
+    "name": "Onion soup",
+    "slug": "onion-soup",
+    "file": "assets/hayday-icons/onion-soup.png"
+  },
+  {
+    "name": "Lemon candle",
+    "slug": "lemon-candle",
+    "file": "assets/hayday-icons/lemon-candle.png"
+  },
+  {
+    "name": "Top hat",
+    "slug": "top-hat",
+    "file": "assets/hayday-icons/top-hat.png"
+  },
+  {
+    "name": "Gnocchi",
+    "slug": "gnocchi",
+    "file": "assets/hayday-icons/gnocchi.png"
+  },
+  {
+    "name": "Beetroot",
+    "slug": "beetroot",
+    "file": "assets/hayday-icons/beetroot.png"
+  },
+  {
+    "name": "Winter veggies",
+    "slug": "winter-veggies",
+    "file": "assets/hayday-icons/winter-veggies.png"
+  },
+  {
+    "name": "Rice noodles",
+    "slug": "rice-noodles",
+    "file": "assets/hayday-icons/rice-noodles.png"
+  },
+  {
+    "name": "Noodle soup",
+    "slug": "noodle-soup",
+    "file": "assets/hayday-icons/noodle-soup.png"
+  },
+  {
+    "name": "Gracious bouquet",
+    "slug": "gracious-bouquet",
+    "file": "assets/hayday-icons/gracious-bouquet.png"
+  },
+  {
+    "name": "Bell pepper",
+    "slug": "bell-pepper",
+    "file": "assets/hayday-icons/bell-pepper.png"
+  },
+  {
+    "name": "Marmalade",
+    "slug": "marmalade",
+    "file": "assets/hayday-icons/marmalade.png"
+  },
+  {
+    "name": "Sun hat",
+    "slug": "sun-hat",
+    "file": "assets/hayday-icons/sun-hat.png"
+  },
+  {
+    "name": "Veggie lasagna",
+    "slug": "veggie-lasagna",
+    "file": "assets/hayday-icons/veggie-lasagna.png"
+  },
+  {
+    "name": "Veggie platter",
+    "slug": "veggie-platter",
+    "file": "assets/hayday-icons/veggie-platter.png"
+  },
+  {
+    "name": "Chamomile essential oil",
+    "slug": "chamomile-essential-oil",
+    "file": "assets/hayday-icons/chamomile-essential-oil.png"
+  },
+  {
+    "name": "Hot dog",
+    "slug": "hot-dog",
+    "file": "assets/hayday-icons/hot-dog.png"
+  },
+  {
+    "name": "Coleslaw",
+    "slug": "coleslaw",
+    "file": "assets/hayday-icons/coleslaw.png"
+  },
+  {
+    "name": "Cotton candy",
+    "slug": "cotton-candy",
+    "file": "assets/hayday-icons/cotton-candy.png"
+  },
+  {
+    "name": "Peach",
+    "slug": "peach",
+    "file": "assets/hayday-icons/peach.png"
+  },
+  {
+    "name": "Peach tart",
+    "slug": "peach-tart",
+    "file": "assets/hayday-icons/peach-tart.png"
+  },
+  {
+    "name": "Tofu dog",
+    "slug": "tofu-dog",
+    "file": "assets/hayday-icons/tofu-dog.png"
+  },
+  {
+    "name": "Big sushi roll",
+    "slug": "big-sushi-roll",
+    "file": "assets/hayday-icons/big-sushi-roll.png"
+  },
+  {
+    "name": "Beetroot salad",
+    "slug": "beetroot-salad",
+    "file": "assets/hayday-icons/beetroot-salad.png"
+  },
+  {
+    "name": "Plain donut",
+    "slug": "plain-donut",
+    "file": "assets/hayday-icons/plain-donut.png"
+  },
+  {
+    "name": "Salsa",
+    "slug": "salsa",
+    "file": "assets/hayday-icons/salsa.png"
+  },
+  {
+    "name": "Spicy bean taco",
+    "slug": "spicy-bean-taco",
+    "file": "assets/hayday-icons/spicy-bean-taco.png"
+  },
+  {
+    "name": "Taco",
+    "slug": "taco",
+    "file": "assets/hayday-icons/taco.png"
+  },
+  {
+    "name": "Colourful omelet",
+    "slug": "colourful-omelet",
+    "file": "assets/hayday-icons/colourful-omelet.png"
+  },
+  {
+    "name": "Spring omelet",
+    "slug": "spring-omelet",
+    "file": "assets/hayday-icons/spring-omelet.png"
+  },
+  {
+    "name": "Summer rolls",
+    "slug": "summer-rolls",
+    "file": "assets/hayday-icons/summer-rolls.png"
+  },
+  {
+    "name": "Orange sorbet",
+    "slug": "orange-sorbet",
+    "file": "assets/hayday-icons/orange-sorbet.png"
+  },
+  {
+    "name": "Corn dog",
+    "slug": "corn-dog",
+    "file": "assets/hayday-icons/corn-dog.png"
+  },
+  {
+    "name": "Potato soup",
+    "slug": "potato-soup",
+    "file": "assets/hayday-icons/potato-soup.png"
+  },
+  {
+    "name": "Ginger",
+    "slug": "ginger",
+    "file": "assets/hayday-icons/ginger.png"
+  },
+  {
+    "name": "Sesame brittle",
+    "slug": "sesame-brittle",
+    "file": "assets/hayday-icons/sesame-brittle.png"
+  },
+  {
+    "name": "Affogato",
+    "slug": "affogato",
+    "file": "assets/hayday-icons/affogato.png"
+  },
+  {
+    "name": "Fish taco",
+    "slug": "fish-taco",
+    "file": "assets/hayday-icons/fish-taco.png"
+  },
+  {
+    "name": "Peach jam",
+    "slug": "peach-jam",
+    "file": "assets/hayday-icons/peach-jam.png"
+  },
+  {
+    "name": "Lobster pasta",
+    "slug": "lobster-pasta",
+    "file": "assets/hayday-icons/lobster-pasta.png"
+  },
+  {
+    "name": "Cucumber sandwich",
+    "slug": "cucumber-sandwich",
+    "file": "assets/hayday-icons/cucumber-sandwich.png"
+  },
+  {
+    "name": "Spicy fish",
+    "slug": "spicy-fish",
+    "file": "assets/hayday-icons/spicy-fish.png"
+  },
+  {
+    "name": "Sprinkled donut",
+    "slug": "sprinkled-donut",
+    "file": "assets/hayday-icons/sprinkled-donut.png"
+  },
+  {
+    "name": "Cheese omelet",
+    "slug": "cheese-omelet",
+    "file": "assets/hayday-icons/cheese-omelet.png"
+  },
+  {
+    "name": "Tea leaf",
+    "slug": "tea-leaf",
+    "file": "assets/hayday-icons/tea-leaf.png"
+  },
+  {
+    "name": "Green tea",
+    "slug": "green-tea",
+    "file": "assets/hayday-icons/green-tea.png"
+  },
+  {
+    "name": "Onion dog",
+    "slug": "onion-dog",
+    "file": "assets/hayday-icons/onion-dog.png"
+  },
+  {
+    "name": "Stuffed peppers",
+    "slug": "stuffed-peppers",
+    "file": "assets/hayday-icons/stuffed-peppers.png"
+  },
+  {
+    "name": "Ginger essential oil",
+    "slug": "ginger-essential-oil",
+    "file": "assets/hayday-icons/ginger-essential-oil.png"
+  },
+  {
+    "name": "Milk tea",
+    "slug": "milk-tea",
+    "file": "assets/hayday-icons/milk-tea.png"
+  },
+  {
+    "name": "Bell pepper soup",
+    "slug": "bell-pepper-soup",
+    "file": "assets/hayday-icons/bell-pepper-soup.png"
+  },
+  {
+    "name": "Chocolate fondue",
+    "slug": "chocolate-fondue",
+    "file": "assets/hayday-icons/chocolate-fondue.png"
+  },
+  {
+    "name": "Peony",
+    "slug": "peony",
+    "file": "assets/hayday-icons/peony.png"
+  },
+  {
+    "name": "Quesadilla",
+    "slug": "quesadilla",
+    "file": "assets/hayday-icons/quesadilla.png"
+  },
+  {
+    "name": "Fruit salad",
+    "slug": "fruit-salad",
+    "file": "assets/hayday-icons/fruit-salad.png"
+  },
+  {
+    "name": "Crunchy donut",
+    "slug": "crunchy-donut",
+    "file": "assets/hayday-icons/crunchy-donut.png"
+  },
+  {
+    "name": "Pasta carbonara",
+    "slug": "pasta-carbonara",
+    "file": "assets/hayday-icons/pasta-carbonara.png"
+  },
+  {
+    "name": "Peach ice cream",
+    "slug": "peach-ice-cream",
+    "file": "assets/hayday-icons/peach-ice-cream.png"
+  },
+  {
+    "name": "Honey tea",
+    "slug": "honey-tea",
+    "file": "assets/hayday-icons/honey-tea.png"
+  },
+  {
+    "name": "Broccoli",
+    "slug": "broccoli",
+    "file": "assets/hayday-icons/broccoli.png"
+  },
+  {
+    "name": "Broccoli pasta",
+    "slug": "broccoli-pasta",
+    "file": "assets/hayday-icons/broccoli-pasta.png"
+  },
+  {
+    "name": "Rice omelet",
+    "slug": "rice-omelet",
+    "file": "assets/hayday-icons/rice-omelet.png"
+  },
+  {
+    "name": "Summer salad",
+    "slug": "summer-salad",
+    "file": "assets/hayday-icons/summer-salad.png"
+  },
+  {
+    "name": "Grapes",
+    "slug": "grapes",
+    "file": "assets/hayday-icons/grapes.png"
+  },
+  {
+    "name": "Grape juice",
+    "slug": "grape-juice",
+    "file": "assets/hayday-icons/grape-juice.png"
+  },
+  {
+    "name": "Onion melt",
+    "slug": "onion-melt",
+    "file": "assets/hayday-icons/onion-melt.png"
+  },
+  {
+    "name": "Honey soap",
+    "slug": "honey-soap",
+    "file": "assets/hayday-icons/honey-soap.png"
+  },
+  {
+    "name": "Lemon lotion",
+    "slug": "lemon-lotion",
+    "file": "assets/hayday-icons/lemon-lotion.png"
+  },
+  {
+    "name": "Colorful candles",
+    "slug": "colorful-candles",
+    "file": "assets/hayday-icons/colorful-candles.png"
+  },
+  {
+    "name": "Mint",
+    "slug": "mint",
+    "file": "assets/hayday-icons/mint.png"
+  },
+  {
+    "name": "Mint essential oil",
+    "slug": "mint-essential-oil",
+    "file": "assets/hayday-icons/mint-essential-oil.png"
+  },
+  {
+    "name": "Grape jam",
+    "slug": "grape-jam",
+    "file": "assets/hayday-icons/grape-jam.png"
+  },
+  {
+    "name": "Mint ice cream",
+    "slug": "mint-ice-cream",
+    "file": "assets/hayday-icons/mint-ice-cream.png"
+  },
+  {
+    "name": "Flower crown",
+    "slug": "flower-crown",
+    "file": "assets/hayday-icons/flower-crown.png"
+  },
+  {
+    "name": "Lemon tea",
+    "slug": "lemon-tea",
+    "file": "assets/hayday-icons/lemon-tea.png"
+  },
+  {
+    "name": "Bacon fondue",
+    "slug": "bacon-fondue",
+    "file": "assets/hayday-icons/bacon-fondue.png"
+  },
+  {
+    "name": "Peanut noodles",
+    "slug": "peanut-noodles",
+    "file": "assets/hayday-icons/peanut-noodles.png"
+  },
+  {
+    "name": "Gingerbread cookie",
+    "slug": "gingerbread-cookie",
+    "file": "assets/hayday-icons/gingerbread-cookie.png"
+  },
+  {
+    "name": "Cream donut",
+    "slug": "cream-donut",
+    "file": "assets/hayday-icons/cream-donut.png"
+  },
+  {
+    "name": "Nachos",
+    "slug": "nachos",
+    "file": "assets/hayday-icons/nachos.png"
+  },
+  {
+    "name": "Spicy pasta",
+    "slug": "spicy-pasta",
+    "file": "assets/hayday-icons/spicy-pasta.png"
+  },
+  {
+    "name": "Broccoli soup",
+    "slug": "broccoli-soup",
+    "file": "assets/hayday-icons/broccoli-soup.png"
+  },
+  {
+    "name": "Bacon fries",
+    "slug": "bacon-fries",
+    "file": "assets/hayday-icons/bacon-fries.png"
+  },
+  {
+    "name": "Potato omelet",
+    "slug": "potato-omelet",
+    "file": "assets/hayday-icons/potato-omelet.png"
+  },
+  {
+    "name": "Mixed smoothie",
+    "slug": "mixed-smoothie",
+    "file": "assets/hayday-icons/mixed-smoothie.png"
+  },
+  {
+    "name": "Banana",
+    "slug": "banana",
+    "file": "assets/hayday-icons/banana.png"
+  },
+  {
+    "name": "Iced banana latte",
+    "slug": "iced-banana-latte",
+    "file": "assets/hayday-icons/iced-banana-latte.png"
+  },
+  {
+    "name": "Apple ginger tea",
+    "slug": "apple-ginger-tea",
+    "file": "assets/hayday-icons/apple-ginger-tea.png"
+  },
+  {
+    "name": "Bacon donut",
+    "slug": "bacon-donut",
+    "file": "assets/hayday-icons/bacon-donut.png"
+  },
+  {
+    "name": "Passion fruit",
+    "slug": "passion-fruit",
+    "file": "assets/hayday-icons/passion-fruit.png"
+  },
+  {
+    "name": "Passion fruit juice",
+    "slug": "passion-fruit-juice",
+    "file": "assets/hayday-icons/passion-fruit-juice.png"
+  },
+  {
+    "name": "Orange tea",
+    "slug": "orange-tea",
+    "file": "assets/hayday-icons/orange-tea.png"
+  },
+  {
+    "name": "Fruit cake",
+    "slug": "fruit-cake",
+    "file": "assets/hayday-icons/fruit-cake.png"
+  },
+  {
+    "name": "Mushroom",
+    "slug": "mushroom",
+    "file": "assets/hayday-icons/mushroom.png"
+  },
+  {
+    "name": "Mushroom salad",
+    "slug": "mushroom-salad",
+    "file": "assets/hayday-icons/mushroom-salad.png"
+  },
+  {
+    "name": "Tofu stir fry",
+    "slug": "tofu-stir-fry",
+    "file": "assets/hayday-icons/tofu-stir-fry.png"
+  },
+  {
+    "name": "Candy bouquet",
+    "slug": "candy-bouquet",
+    "file": "assets/hayday-icons/candy-bouquet.png"
+  },
+  {
+    "name": "Eggplant",
+    "slug": "eggplant",
+    "file": "assets/hayday-icons/eggplant.png"
+  },
+  {
+    "name": "Grilled eggplant",
+    "slug": "grilled-eggplant",
+    "file": "assets/hayday-icons/grilled-eggplant.png"
+  },
+  {
+    "name": "Banana bread",
+    "slug": "banana-bread",
+    "file": "assets/hayday-icons/banana-bread.png"
+  },
+  {
+    "name": "Cheese fondue",
+    "slug": "cheese-fondue",
+    "file": "assets/hayday-icons/cheese-fondue.png"
+  },
+  {
+    "name": "Hand pies",
+    "slug": "hand-pies",
+    "file": "assets/hayday-icons/hand-pies.png"
+  },
+  {
+    "name": "Pickles",
+    "slug": "pickles",
+    "file": "assets/hayday-icons/pickles.png"
+  },
+  {
+    "name": "Watermelon",
+    "slug": "watermelon",
+    "file": "assets/hayday-icons/watermelon.png"
+  },
+  {
+    "name": "Iced tea",
+    "slug": "iced-tea",
+    "file": "assets/hayday-icons/iced-tea.png"
+  },
+  {
+    "name": "Goat cheese toast",
+    "slug": "goat-cheese-toast",
+    "file": "assets/hayday-icons/goat-cheese-toast.png"
+  },
+  {
+    "name": "Watermelon juice",
+    "slug": "watermelon-juice",
+    "file": "assets/hayday-icons/watermelon-juice.png"
+  },
+  {
+    "name": "Birthday bouquet",
+    "slug": "birthday-bouquet",
+    "file": "assets/hayday-icons/birthday-bouquet.png"
+  },
+  {
+    "name": "Passion fruit pie",
+    "slug": "passion-fruit-pie",
+    "file": "assets/hayday-icons/passion-fruit-pie.png"
+  },
+  {
+    "name": "Soft bouquet",
+    "slug": "soft-bouquet",
+    "file": "assets/hayday-icons/soft-bouquet.png"
+  },
+  {
+    "name": "Black sesame smoothie",
+    "slug": "black-sesame-smoothie",
+    "file": "assets/hayday-icons/black-sesame-smoothie.png"
+  },
+  {
+    "name": "Exfoliating soap",
+    "slug": "exfoliating-soap",
+    "file": "assets/hayday-icons/exfoliating-soap.png"
+  },
+  {
+    "name": "Filled donut",
+    "slug": "filled-donut",
+    "file": "assets/hayday-icons/filled-donut.png"
+  },
+  {
+    "name": "Plum",
+    "slug": "plum",
+    "file": "assets/hayday-icons/plum.png"
+  },
+  {
+    "name": "Banana pancakes",
+    "slug": "banana-pancakes",
+    "file": "assets/hayday-icons/banana-pancakes.png"
+  },
+  {
+    "name": "Plum jam",
+    "slug": "plum-jam",
+    "file": "assets/hayday-icons/plum-jam.png"
+  },
+  {
+    "name": "Clay",
+    "slug": "clay",
+    "file": "assets/hayday-icons/clay.png"
+  },
+  {
+    "name": "Tea pot",
+    "slug": "tea-pot",
+    "file": "assets/hayday-icons/tea-pot.png"
+  },
+  {
+    "name": "Floral candle",
+    "slug": "floral-candle",
+    "file": "assets/hayday-icons/floral-candle.png"
+  },
+  {
+    "name": "Chocolate roll",
+    "slug": "chocolate-roll",
+    "file": "assets/hayday-icons/chocolate-roll.png"
+  },
+  {
+    "name": "Canned fish",
+    "slug": "canned-fish",
+    "file": "assets/hayday-icons/canned-fish.png"
+  },
+  {
+    "name": "Chickpea",
+    "slug": "chickpea",
+    "file": "assets/hayday-icons/chickpea.png"
+  },
+  {
+    "name": "Hummus",
+    "slug": "hummus",
+    "file": "assets/hayday-icons/hummus.png"
+  },
+  {
+    "name": "Banana split",
+    "slug": "banana-split",
+    "file": "assets/hayday-icons/banana-split.png"
+  },
+  {
+    "name": "Fish skewer",
+    "slug": "fish-skewer",
+    "file": "assets/hayday-icons/fish-skewer.png"
+  },
+  {
+    "name": "Passion fruit jam",
+    "slug": "passion-fruit-jam",
+    "file": "assets/hayday-icons/passion-fruit-jam.png"
+  },
+  {
+    "name": "Potted plant",
+    "slug": "potted-plant",
+    "file": "assets/hayday-icons/potted-plant.png"
+  },
+  {
+    "name": "Mint tea",
+    "slug": "mint-tea",
+    "file": "assets/hayday-icons/mint-tea.png"
+  },
+  {
+    "name": "Mushroom pot pie",
+    "slug": "mushroom-pot-pie",
+    "file": "assets/hayday-icons/mushroom-pot-pie.png"
+  },
+  {
+    "name": "Mango",
+    "slug": "mango",
+    "file": "assets/hayday-icons/mango.png"
+  },
+  {
+    "name": "Mango juice",
+    "slug": "mango-juice",
+    "file": "assets/hayday-icons/mango-juice.png"
+  },
+  {
+    "name": "Flower pendant",
+    "slug": "flower-pendant",
+    "file": "assets/hayday-icons/flower-pendant.png"
+  },
+  {
+    "name": "Chili poppers",
+    "slug": "chili-poppers",
+    "file": "assets/hayday-icons/chili-poppers.png"
+  },
+  {
+    "name": "Falafel",
+    "slug": "falafel",
+    "file": "assets/hayday-icons/falafel.png"
+  },
+  {
+    "name": "Kimchi",
+    "slug": "kimchi",
+    "file": "assets/hayday-icons/kimchi.png"
+  },
+  {
+    "name": "Eggplant parmesan",
+    "slug": "eggplant-parmesan",
+    "file": "assets/hayday-icons/eggplant-parmesan.png"
+  },
+  {
+    "name": "Honey face mask",
+    "slug": "honey-face-mask",
+    "file": "assets/hayday-icons/honey-face-mask.png"
+  },
+  {
+    "name": "Clay mug",
+    "slug": "clay-mug",
+    "file": "assets/hayday-icons/clay-mug.png"
+  },
+  {
+    "name": "Rich fudge",
+    "slug": "rich-fudge",
+    "file": "assets/hayday-icons/rich-fudge.png"
+  },
+  {
+    "name": "Cocoa smoothie",
+    "slug": "cocoa-smoothie",
+    "file": "assets/hayday-icons/cocoa-smoothie.png"
+  },
+  {
+    "name": "Fried candy bar",
+    "slug": "fried-candy-bar",
+    "file": "assets/hayday-icons/fried-candy-bar.png"
+  },
+  {
+    "name": "Tart dressing",
+    "slug": "tart-dressing",
+    "file": "assets/hayday-icons/tart-dressing.png"
+  },
+  {
+    "name": "Tropical fondue",
+    "slug": "tropical-fondue",
+    "file": "assets/hayday-icons/tropical-fondue.png"
+  },
+  {
+    "name": "Chamomile tea",
+    "slug": "chamomile-tea",
+    "file": "assets/hayday-icons/chamomile-tea.png"
+  },
+  {
+    "name": "Mushroom pasta",
+    "slug": "mushroom-pasta",
+    "file": "assets/hayday-icons/mushroom-pasta.png"
+  },
+  {
+    "name": "Coconut",
+    "slug": "coconut",
+    "file": "assets/hayday-icons/coconut.png"
+  },
+  {
+    "name": "Macaroon",
+    "slug": "macaroon",
+    "file": "assets/hayday-icons/macaroon.png"
+  },
+  {
+    "name": "Plum smoothie",
+    "slug": "plum-smoothie",
+    "file": "assets/hayday-icons/plum-smoothie.png"
+  },
+  {
+    "name": "Dried fruit",
+    "slug": "dried-fruit",
+    "file": "assets/hayday-icons/dried-fruit.png"
+  },
+  {
+    "name": "Mint fudge",
+    "slug": "mint-fudge",
+    "file": "assets/hayday-icons/mint-fudge.png"
+  },
+  {
+    "name": "Coconut ice cream",
+    "slug": "coconut-ice-cream",
+    "file": "assets/hayday-icons/coconut-ice-cream.png"
+  },
+  {
+    "name": "Samosa",
+    "slug": "samosa",
+    "file": "assets/hayday-icons/samosa.png"
+  },
+  {
+    "name": "Plain yogurt",
+    "slug": "plain-yogurt",
+    "file": "assets/hayday-icons/plain-yogurt.png"
+  },
+  {
+    "name": "Mushroom soup",
+    "slug": "mushroom-soup",
+    "file": "assets/hayday-icons/mushroom-soup.png"
+  },
+  {
+    "name": "Chili fudge",
+    "slug": "chili-fudge",
+    "file": "assets/hayday-icons/chili-fudge.png"
+  },
+  {
+    "name": "Tropical smoothie",
+    "slug": "tropical-smoothie",
+    "file": "assets/hayday-icons/tropical-smoothie.png"
+  },
+  {
+    "name": "Guava",
+    "slug": "guava",
+    "file": "assets/hayday-icons/guava.png"
+  },
+  {
+    "name": "Guava juice",
+    "slug": "guava-juice",
+    "file": "assets/hayday-icons/guava-juice.png"
+  },
+  {
+    "name": "Guava compote",
+    "slug": "guava-compote",
+    "file": "assets/hayday-icons/guava-compote.png"
+  },
+  {
+    "name": "Strawberry yogurt",
+    "slug": "strawberry-yogurt",
+    "file": "assets/hayday-icons/strawberry-yogurt.png"
+  },
+  {
+    "name": "Veggie bouquet",
+    "slug": "veggie-bouquet",
+    "file": "assets/hayday-icons/veggie-bouquet.png"
+  },
+  {
+    "name": "Chickpea stew",
+    "slug": "chickpea-stew",
+    "file": "assets/hayday-icons/chickpea-stew.png"
+  },
+  {
+    "name": "Fruit sorbet",
+    "slug": "fruit-sorbet",
+    "file": "assets/hayday-icons/fruit-sorbet.png"
+  },
+  {
+    "name": "Pomegranate",
+    "slug": "pomegranate",
+    "file": "assets/hayday-icons/pomegranate.png"
+  },
+  {
+    "name": "Pomegranate tea",
+    "slug": "pomegranate-tea",
+    "file": "assets/hayday-icons/pomegranate-tea.png"
+  },
+  {
+    "name": "Lemon fudge",
+    "slug": "lemon-fudge",
+    "file": "assets/hayday-icons/lemon-fudge.png"
+  },
+  {
+    "name": "Pomegranate cake",
+    "slug": "pomegranate-cake",
+    "file": "assets/hayday-icons/pomegranate-cake.png"
+  },
+  {
+    "name": "Hummus wrap",
+    "slug": "hummus-wrap",
+    "file": "assets/hayday-icons/hummus-wrap.png"
+  },
+  {
+    "name": "Tropical yogurt",
+    "slug": "tropical-yogurt",
+    "file": "assets/hayday-icons/tropical-yogurt.png"
+  },
+  {
+    "name": "Chili stew",
+    "slug": "chili-stew",
+    "file": "assets/hayday-icons/chili-stew.png"
+  },
+  {
+    "name": "Plain cupcake",
+    "slug": "plain-cupcake",
+    "file": "assets/hayday-icons/plain-cupcake.png"
+  },
+  {
+    "name": "Guava cupcake",
+    "slug": "guava-cupcake",
+    "file": "assets/hayday-icons/guava-cupcake.png"
+  },
+  {
+    "name": "Rice ball",
+    "slug": "rice-ball",
+    "file": "assets/hayday-icons/rice-ball.png"
+  },
+  {
+    "name": "Fresh diffuser",
+    "slug": "fresh-diffuser",
+    "file": "assets/hayday-icons/fresh-diffuser.png"
+  },
+  {
+    "name": "Peanut fudge",
+    "slug": "peanut-fudge",
+    "file": "assets/hayday-icons/peanut-fudge.png"
+  },
+  {
+    "name": "Tropical cupcake",
+    "slug": "tropical-cupcake",
+    "file": "assets/hayday-icons/tropical-cupcake.png"
+  },
+  {
+    "name": "Winter stew",
+    "slug": "winter-stew",
+    "file": "assets/hayday-icons/winter-stew.png"
+  },
+  {
+    "name": "Zesty perfume",
+    "slug": "zesty-perfume",
+    "file": "assets/hayday-icons/zesty-perfume.png"
+  },
+  {
+    "name": "Cookie cupcake",
+    "slug": "cookie-cupcake",
+    "file": "assets/hayday-icons/cookie-cupcake.png"
+  },
+  {
+    "name": "Plain waffles",
+    "slug": "plain-waffles",
+    "file": "assets/hayday-icons/plain-waffles.png"
+  },
+  {
+    "name": "Berry waffles",
+    "slug": "berry-waffles",
+    "file": "assets/hayday-icons/berry-waffles.png"
+  },
+  {
+    "name": "Calming diffuser",
+    "slug": "calming-diffuser",
+    "file": "assets/hayday-icons/calming-diffuser.png"
+  },
+  {
+    "name": "Orange salad",
+    "slug": "orange-salad",
+    "file": "assets/hayday-icons/orange-salad.png"
+  },
+  {
+    "name": "Chocolate waffles",
+    "slug": "chocolate-waffles",
+    "file": "assets/hayday-icons/chocolate-waffles.png"
+  },
+  {
+    "name": "Blueberry waffles",
+    "slug": "blueberry-waffles",
+    "file": "assets/hayday-icons/blueberry-waffles.png"
+  },
+  {
+    "name": "Breakfast waffles",
+    "slug": "breakfast-waffles",
+    "file": "assets/hayday-icons/breakfast-waffles.png"
+  },
+  {
+    "name": "Oats",
+    "slug": "oats",
+    "file": "assets/hayday-icons/oats.png"
+  },
+  {
+    "name": "Breakfast bowl",
+    "slug": "breakfast-bowl",
+    "file": "assets/hayday-icons/breakfast-bowl.png"
+  },
+  {
+    "name": "Apple porridge",
+    "slug": "apple-porridge",
+    "file": "assets/hayday-icons/apple-porridge.png"
+  },
+  {
+    "name": "Pineapple coconut bars",
+    "slug": "pineapple-coconut-bars",
+    "file": "assets/hayday-icons/pineapple-coconut-bars.png"
+  },
+  {
+    "name": "Sweet porridge",
+    "slug": "sweet-porridge",
+    "file": "assets/hayday-icons/sweet-porridge.png"
+  },
+  {
+    "name": "Rich soap",
+    "slug": "rich-soap",
+    "file": "assets/hayday-icons/rich-soap.png"
+  },
+  {
+    "name": "Fresh porridge",
+    "slug": "fresh-porridge",
+    "file": "assets/hayday-icons/fresh-porridge.png"
+  },
+  {
+    "name": "Vanilla milkshake",
+    "slug": "vanilla-milkshake",
+    "file": "assets/hayday-icons/vanilla-milkshake.png"
+  },
+  {
+    "name": "Mocha milkshake",
+    "slug": "mocha-milkshake",
+    "file": "assets/hayday-icons/mocha-milkshake.png"
+  },
+  {
+    "name": "Fruity milkshake",
+    "slug": "fruity-milkshake",
+    "file": "assets/hayday-icons/fruity-milkshake.png"
+  }
+]
