@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, PermissionFlagsBits, ChannelType, MessageFlags } from "discord.js";
+import { SlashCommandBuilder, PermissionFlagsBits, MessageFlags } from "discord.js";
 import { CONFIG_TARGETS } from "../config/configTargets.js";
 import { getGuildConfig, setGuildValue, unsetGuildValue } from "../utils/configStore.js";
 
@@ -22,18 +22,49 @@ export const data = new SlashCommandBuilder()
   .addStringOption((opt) =>
     opt.setName("action").setDescription("What to do with this setting").addChoices(...actionChoices)
   )
-  .addChannelOption((opt) =>
-    opt
-      .setName("channel")
-      .setDescription("Channel or category to bind")
-      .addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement, ChannelType.GuildCategory)
-  )
-  .addRoleOption((opt) => opt.setName("role").setDescription("Role to bind"));
+  .addStringOption((opt) =>
+    opt.setName("value").setDescription("Channel, category, or role to bind").setAutocomplete(true)
+  );
+
+function findMatches(guild, target, query) {
+  const q = query.toLowerCase();
+
+  if (target.valueType === "role") {
+    return guild.roles.cache
+      .filter((role) => role.name.toLowerCase().includes(q))
+      .map((role) => ({ name: role.name, value: role.id }))
+      .slice(0, 25);
+  }
+
+  return guild.channels.cache
+    .filter((channel) => target.channelTypes.includes(channel.type) && channel.name.toLowerCase().includes(q))
+    .map((channel) => ({ name: channel.name, value: channel.id }))
+    .slice(0, 25);
+}
+
+function resolveEntity(guild, target, id) {
+  const entity = target.valueType === "role" ? guild.roles.cache.get(id) : guild.channels.cache.get(id);
+  if (!entity) return null;
+  if (target.valueType === "channel" && !target.channelTypes.includes(entity.type)) return null;
+  return entity;
+}
+
+export async function autocomplete(interaction) {
+  const settingKey = interaction.options.getString("setting");
+  const target = CONFIG_TARGETS[settingKey];
+  const focused = interaction.options.getFocused();
+
+  if (!target) {
+    await interaction.respond([]);
+    return;
+  }
+
+  await interaction.respond(findMatches(interaction.guild, target, focused));
+}
 
 function formatValue(interaction, target, id) {
+  const entity = id ? resolveEntity(interaction.guild, target, id) : null;
   if (!id) return "*not set*";
-  const cache = target.valueType === "role" ? interaction.guild.roles.cache : interaction.guild.channels.cache;
-  const entity = cache.get(id);
   return entity ? `${entity} (${entity.id})` : `*missing ${target.valueType}* (${id})`;
 }
 
@@ -51,8 +82,7 @@ async function showSettings(interaction, onlyKey) {
 export async function execute(interaction) {
   const setting = interaction.options.getString("setting");
   const action = interaction.options.getString("action");
-  const channel = interaction.options.getChannel("channel");
-  const role = interaction.options.getRole("role");
+  const rawValue = interaction.options.getString("value");
 
   if (!setting || !action) {
     await showSettings(interaction, setting ?? undefined);
@@ -75,9 +105,7 @@ export async function execute(interaction) {
     return;
   }
 
-  const value = target.valueType === "role" ? role : channel;
-
-  if (!value) {
+  if (!rawValue) {
     await interaction.reply({
       content: `Please select a ${target.valueType} to bind **${target.label}** to.`,
       flags: MessageFlags.Ephemeral,
@@ -85,18 +113,19 @@ export async function execute(interaction) {
     return;
   }
 
-  if (target.valueType === "channel" && !target.channelTypes.includes(value.type)) {
-    const expected = target.channelTypes.includes(ChannelType.GuildCategory) ? "category" : "text channel";
+  const entity = resolveEntity(interaction.guild, target, rawValue);
+
+  if (!entity) {
     await interaction.reply({
-      content: `**${target.label}** must be bound to a ${expected}, not ${value}.`,
+      content: `That's not a valid selection for **${target.label}** — please pick one of the suggested options.`,
       flags: MessageFlags.Ephemeral,
     });
     return;
   }
 
-  setGuildValue(interaction.guildId, setting, value.id);
+  setGuildValue(interaction.guildId, setting, entity.id);
   await interaction.reply({
-    content: `**${target.label}** has been bound to ${value}.`,
+    content: `**${target.label}** has been bound to ${entity}.`,
     flags: MessageFlags.Ephemeral,
   });
 }
