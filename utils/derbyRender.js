@@ -43,15 +43,16 @@ const BORDER = "#463c48";
 const ROW_H = 56;
 const COL_LETTER = 50;
 const COL_ICON = 60;
-const COL_ITEM = 300;
-const COL_QTY = 100;
-const COL_TIME = 160;
-const COL_POINTS = 100;
-const COL_STATUS = 190;
+const COL_ITEM = 260;
+const COL_QTY = 80;
+const COL_TIME = 140;
+const COL_POINTS = 80;
+const COL_STATUS = 180;
 const PAD = 20;
 const HEADER_H = 34;
+const GAP = 40;
 
-const WIDTH = PAD * 2 + COL_LETTER + COL_ICON + COL_ITEM + COL_QTY + COL_TIME + COL_POINTS + COL_STATUS;
+const COL_W = COL_LETTER + COL_ICON + COL_ITEM + COL_QTY + COL_TIME + COL_POINTS + COL_STATUS;
 
 function roundRectPath(ctx, x, y, w, h, r) {
   ctx.beginPath();
@@ -63,39 +64,31 @@ function roundRectPath(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-export async function renderDerbyChunk(chunk, reservedCounts) {
-  ensureFonts();
-
-  const height = HEADER_H + ROW_H * chunk.length + PAD;
-  const canvas = createCanvas(WIDTH, height);
-  const ctx = canvas.getContext("2d");
-
-  ctx.fillStyle = BG;
-  ctx.fillRect(0, 0, WIDTH, height);
-
+async function drawColumn(ctx, originX, items, reservedCounts, letterOffset) {
+  let hx = originX + COL_LETTER + COL_ICON;
   ctx.fillStyle = HEADER_BG;
-  ctx.fillRect(0, 0, WIDTH, HEADER_H);
+  ctx.fillRect(originX, PAD, COL_W, HEADER_H);
   ctx.fillStyle = SUBTEXT;
   ctx.font = '14px "DejaVu Sans"';
-  let hx = PAD + COL_LETTER + COL_ICON;
-  ctx.fillText("Item", hx + 8, 22);
+  ctx.fillText("Item", hx + 8, PAD + 22);
   hx += COL_ITEM;
-  ctx.fillText("Qty", hx + 8, 22);
+  ctx.fillText("Qty", hx + 8, PAD + 22);
   hx += COL_QTY;
-  ctx.fillText("Time", hx + 8, 22);
+  ctx.fillText("Time", hx + 8, PAD + 22);
   hx += COL_TIME;
-  ctx.fillText("Pts", hx + 8, 22);
+  ctx.fillText("Pts", hx + 8, PAD + 22);
   hx += COL_POINTS;
-  ctx.fillText("Status", hx + 8, 22);
+  ctx.fillText("Status", hx + 8, PAD + 22);
 
-  let y = HEADER_H;
-  for (let i = 0; i < chunk.length; i++) {
-    const item = chunk[i];
-    const letter = String.fromCharCode(65 + i);
+  let y = PAD + HEADER_H;
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const globalIndex = letterOffset + i;
+    const letter = String.fromCharCode(65 + globalIndex);
     ctx.fillStyle = i % 2 === 0 ? ROW_A : ROW_B;
-    ctx.fillRect(0, y, WIDTH, ROW_H);
+    ctx.fillRect(originX, y, COL_W, ROW_H);
 
-    let x = PAD;
+    let x = originX;
     const cx = x + COL_LETTER / 2;
     const cy = y + ROW_H / 2;
     ctx.beginPath();
@@ -137,7 +130,7 @@ export async function renderDerbyChunk(chunk, reservedCounts) {
     ctx.fillText(String(item.points), x, y + ROW_H / 2 + 6);
     x += COL_POINTS;
 
-    const count = reservedCounts[i] ?? 0;
+    const count = reservedCounts[globalIndex] ?? 0;
     const btnW = COL_STATUS - 30;
     const btnH = 36;
     const bx = x + 10;
@@ -164,9 +157,31 @@ export async function renderDerbyChunk(chunk, reservedCounts) {
     ctx.strokeStyle = BORDER;
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(WIDTH, y);
+    ctx.moveTo(originX, y);
+    ctx.lineTo(originX + COL_W, y);
     ctx.stroke();
+  }
+}
+
+export async function renderDerbyChunk(chunk, reservedCounts) {
+  ensureFonts();
+
+  const leftCount = Math.ceil(chunk.length / 2);
+  const left = chunk.slice(0, leftCount);
+  const right = chunk.slice(leftCount);
+  const rows = Math.max(left.length, right.length);
+
+  const width = right.length > 0 ? PAD * 2 + COL_W * 2 + GAP : PAD * 2 + COL_W;
+  const height = PAD + HEADER_H + ROW_H * rows + PAD;
+
+  const canvas = createCanvas(width, height);
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = BG;
+  ctx.fillRect(0, 0, width, height);
+
+  await drawColumn(ctx, PAD, left, reservedCounts, 0);
+  if (right.length > 0) {
+    await drawColumn(ctx, PAD + COL_W + GAP, right, reservedCounts, leftCount);
   }
 
   return canvas.encode("png");
