@@ -79,7 +79,7 @@ function buildApplicationModal() {
     .setRequired(true);
 
   return new ModalBuilder()
-    .setTitle("🐰 Hay Day Application")
+    .setTitle("🐰 Join Bunny Bakers")
     .addComponents(
       new ActionRowBuilder().addComponents(intro),
       new ActionRowBuilder().addComponents(farmName),
@@ -101,7 +101,7 @@ function extractApplicationAnswers(fields) {
 
 function buildApplicationEmbed(applicant, answers) {
   return new EmbedBuilder()
-    .setTitle("🐰 New Farm Application! 🥕")
+    .setTitle("🐰 New Bunny Baker Application! 🥕")
     .setColor(BRAND_COLOR)
     .setThumbnail(applicant.displayAvatarURL())
     .addFields(

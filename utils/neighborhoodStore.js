@@ -35,7 +35,7 @@ export function getNeighborhood(guildId, id) {
   return (readAll()[guildId] ?? {})[id] ?? null;
 }
 
-export function createNeighborhood(guildId, { name, tag, categoryId, derbyChannelId }) {
+export function createNeighborhood(guildId, { name, tag, categoryId, derbyChannelId, requestChannelId }) {
   const all = readAll();
   const guildData = all[guildId] ?? {};
   const base = slugify(name) || "neighborhood";
@@ -51,6 +51,7 @@ export function createNeighborhood(guildId, { name, tag, categoryId, derbyChanne
     tag: tag ?? null,
     categoryId: categoryId ?? null,
     derbyChannelId: derbyChannelId ?? null,
+    requestChannelId: requestChannelId ?? null,
   };
   guildData[id] = record;
   all[guildId] = guildData;

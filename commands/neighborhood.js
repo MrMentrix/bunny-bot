@@ -8,8 +8,6 @@ import {
 } from "../utils/neighborhoodStore.js";
 import { postDerbyBoard } from "../utils/derbyBoard.js";
 import { getBoard, deleteBoard } from "../utils/derbyBoardStore.js";
-import { parseTimeWithOffset, nextOccurrenceUnix } from "../utils/derbyTime.js";
-import { setScheduled } from "../utils/derbyAnnouncementStore.js";
 
 export const data = new SlashCommandBuilder()
   .setName("neighborhood")
@@ -33,6 +31,12 @@ export const data = new SlashCommandBuilder()
           .setDescription("Channel for this neighborhood's derby board (must be inside the category)")
           .addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)
       )
+      .addChannelOption((opt) =>
+        opt
+          .setName("request_channel")
+          .setDescription("Channel for this neighborhood's pre-derby resource request reminder")
+          .addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)
+      )
   )
   .addSubcommand((sub) =>
     sub
@@ -52,6 +56,12 @@ export const data = new SlashCommandBuilder()
           .setDescription("New derby channel (must be inside the category)")
           .addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)
       )
+      .addChannelOption((opt) =>
+        opt
+          .setName("request_channel")
+          .setDescription("New pre-derby resource request channel")
+          .addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)
+      )
   )
   .addSubcommand((sub) =>
     sub
@@ -61,18 +71,7 @@ export const data = new SlashCommandBuilder()
         opt.setName("neighborhood").setDescription("Which neighborhood").setRequired(true).setAutocomplete(true)
       )
   )
-  .addSubcommand((sub) => sub.setName("list").setDescription("List all registered neighborhoods"))
-  .addSubcommand((sub) =>
-    sub
-      .setName("derby-announcement")
-      .setDescription("Schedule the derby delay announcement to every neighborhood's derby channel")
-      .addStringOption((opt) =>
-        opt
-          .setName("time")
-          .setDescription("24-hour format with UTC offset, e.g. 14:00 UTC+2 — plain 14:00 won't work")
-          .setRequired(true)
-      )
-  );
+  .addSubcommand((sub) => sub.setName("list").setDescription("List all registered neighborhoods"));
 
 export async function autocomplete(interaction) {
   const focused = interaction.options.getFocused().toLowerCase();
@@ -87,10 +86,12 @@ export async function autocomplete(interaction) {
 function formatNeighborhood(guild, n) {
   const category = n.categoryId ? guild.channels.cache.get(n.categoryId) : null;
   const derbyChannel = n.derbyChannelId ? guild.channels.cache.get(n.derbyChannelId) : null;
+  const requestChannel = n.requestChannelId ? guild.channels.cache.get(n.requestChannelId) : null;
   return [
     `**${n.name}**${n.tag ? ` (${n.tag})` : ""}`,
     `Category: ${category ? category.name : "*not set*"}`,
     `Derby channel: ${derbyChannel ? derbyChannel.toString() : "*not set*"}`,
+    `Request channel: ${requestChannel ? requestChannel.toString() : "*not set*"}`,
   ].join("\n");
 }
 
@@ -113,6 +114,7 @@ export async function execute(interaction) {
     const tag = interaction.options.getString("tag");
     const category = interaction.options.getChannel("category");
     const derbyChannel = interaction.options.getChannel("derby_channel");
+    const requestChannel = interaction.options.getChannel("request_channel");
 
     if (derbyChannel) {
       if (!category) {
@@ -139,6 +141,7 @@ export async function execute(interaction) {
       tag,
       categoryId: category?.id,
       derbyChannelId: derbyChannel?.id,
+      requestChannelId: requestChannel?.id,
     });
 
     if (derbyChannel) {
@@ -164,6 +167,7 @@ export async function execute(interaction) {
     const tag = interaction.options.getString("tag");
     const category = interaction.options.getChannel("category");
     const derbyChannel = interaction.options.getChannel("derby_channel");
+    const requestChannel = interaction.options.getChannel("request_channel");
 
     const resolvedCategoryId = category?.id ?? existing.categoryId;
     const resolvedDerbyChannel =
@@ -193,6 +197,7 @@ export async function execute(interaction) {
     if (tag) patch.tag = tag;
     if (category) patch.categoryId = category.id;
     if (derbyChannel) patch.derbyChannelId = derbyChannel.id;
+    if (requestChannel) patch.requestChannelId = requestChannel.id;
 
     const updated = updateNeighborhood(interaction.guildId, id, patch);
 
@@ -231,28 +236,5 @@ export async function execute(interaction) {
 
     deleteNeighborhood(interaction.guildId, id);
     await interaction.editReply({ content: `Neighborhood **${existing.name}** deleted.` });
-    return;
-  }
-
-  if (subcommand === "derby-announcement") {
-    const timeInput = interaction.options.getString("time", true);
-    const parsed = parseTimeWithOffset(timeInput);
-
-    if (!parsed) {
-      await interaction.reply({
-        content:
-          "Couldn't parse that time. Use 24-hour format with a UTC offset, e.g. `14:00 UTC+2` or `09:30 UTC-5`. Plain `14:00` without an offset won't work.",
-        flags: MessageFlags.Ephemeral,
-      });
-      return;
-    }
-
-    const scheduledAt = nextOccurrenceUnix(parsed);
-    setScheduled(interaction.guildId, scheduledAt);
-
-    await interaction.reply({
-      content: `Derby announcement scheduled for <t:${scheduledAt}:F> (<t:${scheduledAt}:R>).`,
-      flags: MessageFlags.Ephemeral,
-    });
   }
 }

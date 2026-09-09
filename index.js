@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { startTicketReminderScheduler } from "./utils/ticketReminder.js";
-import { startDerbyAnnouncementScheduler } from "./utils/derbyAnnouncementScheduler.js";
+import { startTimerScheduler } from "./utils/timerScheduler.js";
 import { refreshDerbyImage } from "./utils/derbyBoard.js";
 import { allBoards, findByMessageId } from "./utils/derbyBoardStore.js";
 import { getNeighborhood } from "./utils/neighborhoodStore.js";
@@ -50,7 +50,7 @@ async function recacheDerbyBoards(readyClient) {
 client.once(Events.ClientReady, async (readyClient) => {
   console.log(`Logged in as ${readyClient.user.tag}`);
   startTicketReminderScheduler(readyClient);
-  startDerbyAnnouncementScheduler(readyClient);
+  startTimerScheduler(readyClient);
   await recacheDerbyBoards(readyClient);
 });
 

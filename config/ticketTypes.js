@@ -8,13 +8,21 @@ export const TICKET_TYPES = {
     autoMessageKey: "support-services",
   },
   application: {
-    label: "Application",
+    label: "Join Bunny Bakers",
     channelPrefix: "application",
     staffRoleSettings: ["moderator-role"],
     pingRoleSettings: ["moderator-role"],
     usesModal: true,
     logSetting: "application-ticket-log",
     autoMessageKey: "application",
+  },
+  "join-our-staff": {
+    label: "Join our staff",
+    channelPrefix: "staff",
+    staffRoleSettings: ["moderator-role"],
+    pingRoleSettings: ["moderator-role"],
+    logSetting: "ticket-log",
+    autoMessageKey: "join-our-staff",
   },
   giveaway: {
     label: "Giveaway",
