@@ -8,6 +8,8 @@ import {
 } from "../utils/neighborhoodStore.js";
 import { postDerbyBoard } from "../utils/derbyBoard.js";
 import { getBoard, deleteBoard } from "../utils/derbyBoardStore.js";
+import { parseTimeWithOffset, nextOccurrenceUnix } from "../utils/derbyTime.js";
+import { setScheduled } from "../utils/derbyAnnouncementStore.js";
 
 export const data = new SlashCommandBuilder()
   .setName("neighborhood")
@@ -59,7 +61,18 @@ export const data = new SlashCommandBuilder()
         opt.setName("neighborhood").setDescription("Which neighborhood").setRequired(true).setAutocomplete(true)
       )
   )
-  .addSubcommand((sub) => sub.setName("list").setDescription("List all registered neighborhoods"));
+  .addSubcommand((sub) => sub.setName("list").setDescription("List all registered neighborhoods"))
+  .addSubcommand((sub) =>
+    sub
+      .setName("derby-announcement")
+      .setDescription("Schedule the derby delay announcement to every neighborhood's derby channel")
+      .addStringOption((opt) =>
+        opt
+          .setName("time")
+          .setDescription("24-hour format with UTC offset, e.g. 14:00 UTC+2 — plain 14:00 won't work")
+          .setRequired(true)
+      )
+  );
 
 export async function autocomplete(interaction) {
   const focused = interaction.options.getFocused().toLowerCase();
@@ -218,5 +231,28 @@ export async function execute(interaction) {
 
     deleteNeighborhood(interaction.guildId, id);
     await interaction.editReply({ content: `Neighborhood **${existing.name}** deleted.` });
+    return;
+  }
+
+  if (subcommand === "derby-announcement") {
+    const timeInput = interaction.options.getString("time", true);
+    const parsed = parseTimeWithOffset(timeInput);
+
+    if (!parsed) {
+      await interaction.reply({
+        content:
+          "Couldn't parse that time. Use 24-hour format with a UTC offset, e.g. `14:00 UTC+2` or `09:30 UTC-5`. Plain `14:00` without an offset won't work.",
+        flags: MessageFlags.Ephemeral,
+      });
+      return;
+    }
+
+    const scheduledAt = nextOccurrenceUnix(parsed);
+    setScheduled(interaction.guildId, scheduledAt);
+
+    await interaction.reply({
+      content: `Derby announcement scheduled for <t:${scheduledAt}:F> (<t:${scheduledAt}:R>).`,
+      flags: MessageFlags.Ephemeral,
+    });
   }
 }

@@ -1,17 +1,11 @@
 export const TICKET_TYPES = {
-  support: {
-    label: "Support",
+  "support-services": {
+    label: "Support Services",
     channelPrefix: "ticket",
     staffRoleSettings: ["supporter-role", "moderator-role"],
-    pingRoleSettings: ["supporter-role"],
+    pingRoleSettings: ["supporter-role", "moderator-role"],
     logSetting: "ticket-log",
-  },
-  report: {
-    label: "Report",
-    channelPrefix: "ticket",
-    staffRoleSettings: ["moderator-role"],
-    pingRoleSettings: ["moderator-role"],
-    logSetting: "ticket-log",
+    autoMessageKey: "support-services",
   },
   application: {
     label: "Application",
@@ -20,6 +14,7 @@ export const TICKET_TYPES = {
     pingRoleSettings: ["moderator-role"],
     usesModal: true,
     logSetting: "application-ticket-log",
+    autoMessageKey: "application",
   },
   giveaway: {
     label: "Giveaway",

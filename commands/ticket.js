@@ -15,7 +15,9 @@ import {
 } from "discord.js";
 import { TICKET_TYPES } from "../config/ticketTypes.js";
 import { BRAND_COLOR } from "../config/theme.js";
+import { AUTO_MESSAGE_TYPES } from "../config/autoMessageDefaults.js";
 import { getGuildConfig } from "../utils/configStore.js";
+import { getAutoMessage } from "../utils/autoMessageStore.js";
 import { createTicket, getTicket, deleteTicket, nextTicketNumber } from "../utils/ticketStore.js";
 
 export const data = new SlashCommandBuilder()
@@ -114,25 +116,18 @@ function buildApplicationEmbed(applicant, answers) {
 }
 
 function buildGiveawayModal() {
-  const description = new TextInputBuilder()
-    .setCustomId("description")
-    .setLabel("What do you want to give away?")
-    .setStyle(TextInputStyle.Paragraph)
-    .setMaxLength(1000)
+  const item = new TextInputBuilder()
+    .setCustomId("item")
+    .setLabel("Giveaway Item")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("e.g. Cheese")
     .setRequired(true);
 
-  const targetGroup = new TextInputBuilder()
-    .setCustomId("target_group")
-    .setLabel("Target Group")
+  const quantityPerWinner = new TextInputBuilder()
+    .setCustomId("quantity_per_winner")
+    .setLabel("Quantity Per Winner")
     .setStyle(TextInputStyle.Short)
-    .setPlaceholder("Own Neighborhood or All Neighborhoods")
-    .setRequired(true);
-
-  const duration = new TextInputBuilder()
-    .setCustomId("duration")
-    .setLabel("Duration")
-    .setStyle(TextInputStyle.Short)
-    .setPlaceholder("e.g. 3 days")
+    .setPlaceholder("e.g. 10")
     .setRequired(true);
 
   const winners = new TextInputBuilder()
@@ -142,22 +137,38 @@ function buildGiveawayModal() {
     .setPlaceholder("e.g. 1")
     .setRequired(true);
 
+  const targetGroup = new TextInputBuilder()
+    .setCustomId("target_group")
+    .setLabel("Neighbourhood(s)")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("Your neighbourhood or all neighbourhoods")
+    .setRequired(true);
+
+  const duration = new TextInputBuilder()
+    .setCustomId("duration")
+    .setLabel("Duration")
+    .setStyle(TextInputStyle.Short)
+    .setPlaceholder("e.g. 24 hours")
+    .setRequired(true);
+
   return new ModalBuilder()
     .setTitle("🐰 Giveaway Request")
     .addComponents(
-      new ActionRowBuilder().addComponents(description),
+      new ActionRowBuilder().addComponents(item),
+      new ActionRowBuilder().addComponents(quantityPerWinner),
+      new ActionRowBuilder().addComponents(winners),
       new ActionRowBuilder().addComponents(targetGroup),
-      new ActionRowBuilder().addComponents(duration),
-      new ActionRowBuilder().addComponents(winners)
+      new ActionRowBuilder().addComponents(duration)
     );
 }
 
 function extractGiveawayAnswers(fields) {
   return {
-    description: fields.getTextInputValue("description"),
+    item: fields.getTextInputValue("item"),
+    quantityPerWinner: fields.getTextInputValue("quantity_per_winner"),
+    winners: fields.getTextInputValue("winners"),
     targetGroup: fields.getTextInputValue("target_group"),
     duration: fields.getTextInputValue("duration"),
-    winners: fields.getTextInputValue("winners"),
   };
 }
 
@@ -167,10 +178,11 @@ function buildGiveawayEmbed(host, answers) {
     .setColor(BRAND_COLOR)
     .setThumbnail(host.displayAvatarURL())
     .addFields(
-      { name: "🎀 Description", value: answers.description },
-      { name: "🌍 Target Group", value: answers.targetGroup, inline: true },
-      { name: "⏳ Duration", value: answers.duration, inline: true },
-      { name: "🏆 Winners", value: answers.winners, inline: true }
+      { name: "🎀 Item", value: answers.item, inline: true },
+      { name: "🏆 Quantity Per Winner", value: answers.quantityPerWinner, inline: true },
+      { name: "🎉 Number of Winners", value: answers.winners, inline: true },
+      { name: "🌍 Neighbourhood(s)", value: answers.targetGroup, inline: true },
+      { name: "⏳ Duration", value: answers.duration, inline: true }
     )
     .setFooter({ text: "A moderator will review this shortly! 🐾" })
     .setTimestamp();
@@ -296,6 +308,13 @@ async function handleCreate(interaction, typeKey, answers) {
     allowedMentions: { roles: pingRoleIds },
     components: [closeRow],
   });
+
+  if (ticketType.autoMessageKey) {
+    const autoMessage =
+      getAutoMessage(interaction.guildId, ticketType.autoMessageKey) ??
+      AUTO_MESSAGE_TYPES[ticketType.autoMessageKey].default;
+    await ticketChannel.send({ content: autoMessage });
+  }
 
   await interaction.editReply({ content: `Your ticket has been created: ${ticketChannel}` });
 }
