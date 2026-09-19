@@ -20,13 +20,18 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, "assets", "manifest.
 const fileByName = new Map(manifest.map((m) => [m.name, m.file]));
 const iconCache = new Map();
 
+const ICON_CACHE_SIZE = 80;
+
 async function getIcon(itemName) {
   if (iconCache.has(itemName)) return iconCache.get(itemName);
   const file = fileByName.get(itemName);
   if (!file) return null;
-  const img = await loadImage(path.join(root, file));
-  iconCache.set(itemName, img);
-  return img;
+  const original = await loadImage(path.join(root, file));
+  const small = createCanvas(ICON_CACHE_SIZE, ICON_CACHE_SIZE);
+  const sctx = small.getContext("2d");
+  sctx.drawImage(original, 0, 0, ICON_CACHE_SIZE, ICON_CACHE_SIZE);
+  iconCache.set(itemName, small);
+  return small;
 }
 
 const BRAND = "#f25ff7";
