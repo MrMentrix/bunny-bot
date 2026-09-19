@@ -1,4 +1,4 @@
-import { Client, Collection, Events, GatewayIntentBits, Partials, MessageFlags } from "discord.js";
+import { Client, Collection, Events, GatewayIntentBits, Partials, MessageFlags, Options } from "discord.js";
 import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
@@ -14,6 +14,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessageReactions],
   partials: [Partials.Message, Partials.Reaction, Partials.Channel],
+  makeCache: Options.cacheWithLimits({
+    MessageManager: 100,        // nur letzte 100 Nachrichten pro Kanal
+    ReactionManager: 100,
+  }),
+  sweepers: {
+    messages: {
+      interval: 3600,           // stündlich aufräumen
+      lifetime: 1800,           // Nachrichten älter als 30min löschen
+    },
+  },
 });
 client.commands = new Collection();
 
